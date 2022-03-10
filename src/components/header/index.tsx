@@ -58,8 +58,6 @@ const Header: React.FC<Props> = () => {
         localStorage.setItem('isLogin', "false")
     }
 
-
-
     return (
         <div className={styles.root}>
             <BaseLink to='/' >

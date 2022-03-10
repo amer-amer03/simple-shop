@@ -32,8 +32,6 @@ const Login = () => {
         }
     };
 
-
-
     return (
         <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
             <div>

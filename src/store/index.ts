@@ -2,6 +2,9 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import catalogReducer, { ICatalogState, initState as catalogState } from './reducers/catalog';
 import modalReducer, { IModalState, initState as modalState } from './reducers/modal';
+import { persistStore } from "redux-persist";
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
 export interface ISimpleShopState {
     catalog: ICatalogState
@@ -13,6 +16,11 @@ const initState: ISimpleShopState = {
     modal: modalState
 };
 
+
+const persistConfig = {
+    key: "root",
+    storage,
+};
 const reducers = combineReducers({
     catalog: catalogReducer,
     modal: modalReducer
@@ -20,5 +28,8 @@ const reducers = combineReducers({
 
 const middlewares = [thunk];
 
-const store = createStore(reducers, initState, applyMiddleware(...middlewares));
-export default store; 
+const persisted = persistReducer(persistConfig, reducers);
+
+export const store = createStore(persisted, initState, applyMiddleware(...middlewares));
+
+export const persistor = persistStore(store);
