@@ -4,10 +4,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import LabelInput from "../LabelInput";
 import ErrorMessage from "../ErrorMessage";
 import BaseButton from "../BaseButton";
-import styles from './index.module.scss';
 import { IRegistrationData } from "../../typescript/interfaces/registration";
 import { IProps } from "../../typescript/interfaces/props";
 import { passwordValidationRegex } from "../../utils/validation/regex";
+import styles from './index.module.scss';
 
 const schema = yup.object({
     name: yup.string().required('This field is required'),

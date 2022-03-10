@@ -74,8 +74,10 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
     })
     return (
         <div className={styles.root}>
-            {catalogContent}
-            <BaseButton onClick={handleShowMorePosts} type="button" value='Load more' />
+            <div className={styles.catalog}>
+                {catalogContent}
+            </div>
+            <BaseButton className={styles.button} onClick={handleShowMorePosts} type="button" value='Load more' />
         </div>
     )
 }

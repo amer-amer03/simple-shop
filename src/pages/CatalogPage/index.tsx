@@ -15,7 +15,6 @@ const CatalogPage = () => {
 
     return (
         <>
-            <Header />
             <Catalog catalog={catalog} />
         </>
     )

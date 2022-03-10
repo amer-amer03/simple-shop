@@ -7,6 +7,7 @@ import ModalContent from './components/ModalContent';
 import HomePage from './pages/HomePage';
 import { useSelector } from 'react-redux';
 import { modalSelector } from './store/selectors/modal';
+import Layout from './components/Layout';
 
 const App: FC = () => {
   const openModalType = useSelector(modalSelector);
@@ -24,14 +25,17 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+        </Routes>
 
-      <Modal modalOpenType={modalOpenType}>
-        <ModalContent setModalOpenType={setModalOpenType} openModalType={openModalType} children={<Modal2 />} />
-      </Modal>
+        <Modal modalOpenType={modalOpenType}>
+          <ModalContent setModalOpenType={setModalOpenType} openModalType={openModalType} children={<Modal2 />} />
+        </Modal>
+      </Layout>
+
     </div>
   );
 }

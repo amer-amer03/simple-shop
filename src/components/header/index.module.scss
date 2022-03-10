@@ -1,4 +1,21 @@
 .root {
     display: flex;
     background-color: rgb(193, 225, 255);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon {
+    height: 30px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.item {
+    margin: 0px 10px;
+    display: flex;
+}
+.button {
+    margin-left: 15px;
 }

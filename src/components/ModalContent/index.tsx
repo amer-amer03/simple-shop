@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import styles from './index.module.scss';
 import { hideModal } from "../../store/actions/modal";
 import Cart from "../Cart";
+import Close from "../icons/Close";
 
 interface Props extends IProps {
     setModalOpenType: React.Dispatch<React.SetStateAction<string>>;
@@ -33,8 +34,8 @@ const ModalContent: FC<Props> = ({ setModalOpenType, openModalType, children, ..
 
     return (
         <div className={styles.root} {...props}>
-            <button onClick={handleHideModal}>
-                close modal
+            <button className={styles.button} onClick={handleHideModal}>
+                <Close />
             </button>
             {modalContent(openModalType)}
         </div>
