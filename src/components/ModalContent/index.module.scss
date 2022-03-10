@@ -1,0 +1,13 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 50px 30px;
+    max-width: 960px;
+    box-shadow: 0 8px 40px rgb(73, 71, 71);
+    border-radius: 8px;
+    max-height: 100%;
+    margin: 0 auto;
+}
