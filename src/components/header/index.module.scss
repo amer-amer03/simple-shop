@@ -1,8 +1,10 @@
 .root {
     display: flex;
-    background-color: rgb(193, 225, 255);
     justify-content: flex-end;
     align-items: center;
+    padding: 20px;
+    background: rgb(240, 246, 252);
+    border-bottom: 1px solid rgb(194, 194, 194);
 }
 
 .icon {

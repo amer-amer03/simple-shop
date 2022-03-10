@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { openModal } from "../../store/actions/modal";
 import { IProps } from "../../typescript/interfaces/props";
@@ -8,6 +9,33 @@ import styles from './index.module.scss';
 interface Props extends IProps { }
 
 const Header: React.FC<Props> = () => {
+
+    // const [user, setUser] = useState<any>()
+    // const [isLogin, setIsLogin] = useState<any>()
+
+    // useEffect(() => {
+    //     const checkUser = () => {
+    //         const user = JSON.parse(localStorage.getItem('user') || '{}');
+    //         if (user) {
+    //             setUser(user)
+    //         }
+    //     }
+    //     const checkIsLogin = () => {
+    //         const isLogin = localStorage.getItem('isLogin');
+    //         if (isLogin) {
+    //             setIsLogin(isLogin)
+    //         }
+    //     }
+
+    //     window.addEventListener('storage', checkUser)
+
+    //     window.addEventListener('storage', checkIsLogin)
+
+    //     return () => {
+    //         window.removeEventListener('storage', checkUser)
+    //         window.removeEventListener('storage', checkIsLogin)
+    //     }
+    // }, [])
 
     const dispatch = useDispatch()
 
@@ -23,13 +51,14 @@ const Header: React.FC<Props> = () => {
         dispatch(openModal('login'))
     }
 
-
     const isLogin = localStorage.getItem('isLogin');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
 
     const logOut = () => {
         localStorage.setItem('isLogin', "false")
     }
+
+
 
     return (
         <div className={styles.root}>

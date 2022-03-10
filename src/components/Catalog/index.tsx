@@ -36,6 +36,7 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
         }
 
     }, [localCart]);
+
     const handleShowMorePosts = () => {
         loopWithSlice(next, next + itemsPerPage);
         setNext(next + itemsPerPage);
@@ -47,7 +48,6 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
         let existingItem = cartCopy.find((cartItem: ICatalogDataResults) => cartItem.id === i.id)
 
         if (!existingItem) {
-
             cartCopy.push(i)
         }
         setCart(cartCopy)
@@ -55,6 +55,7 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
         const stringCart = JSON.stringify(cartCopy);
         localStorage.setItem("cart", stringCart)
     }
+
     const catalogContent = itemsToShow.map((i) => {
         return (
             <div key={i.id} className={styles.catalogItem}>

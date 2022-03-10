@@ -14,7 +14,6 @@ const schema = yup.object({
 }).required();
 
 const Login = () => {
-
     const defaultValues: ILoginData = {
         email: '',
         password: '',
@@ -24,7 +23,15 @@ const Login = () => {
         defaultValues,
         resolver: yupResolver(schema)
     });
-    const onSubmit = (data: any) => console.log(data);
+    const onSubmit = (data: ILoginData) => {
+
+        const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+        if (user.email === data.email && user.password1 === data.password) {
+            localStorage.setItem('isLogin', "true")
+        }
+    };
+
 
 
     return (
@@ -51,6 +58,7 @@ const Login = () => {
                     render={({ field: { ref, ...rest } }) => (
                         <LabelInput
                             label="Password"
+                            type="password"
                             placeholder="Please enter a password"
                             {...rest}
                         />
@@ -59,7 +67,7 @@ const Login = () => {
                 {errors.password && <ErrorMessage value={errors.password.message} />}
             </div>
 
-            <BaseButton type="submit" value="submit" />
+            <BaseButton className={styles.button} type="submit" value="submit" />
         </form>
     )
 }

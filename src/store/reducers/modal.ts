@@ -13,7 +13,6 @@ function modalReducer(state = initState, action: IModalAction): IModalState {
         case modalTypes.SHOW_MODAL:
             return { ...state, modalType: action.modalType ? action.modalType : '' }
         case modalTypes.HIDE_MODAL:
-            console.log(action.type)
             return { ...state, modalType: '' }
     }
     return state
