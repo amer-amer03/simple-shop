@@ -9,3 +9,22 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.534);
 }
+
+.modalContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px 30px;
+    max-width: 960px;
+    min-width: 500px;
+    box-shadow: 0 8px 40px rgb(73, 71, 71);
+    border-radius: 8px;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.button {
+    align-self: flex-end;
+}

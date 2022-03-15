@@ -4,8 +4,13 @@ import { Controller, useForm } from "react-hook-form";
 import LabelInput from "../LabelInput";
 import ErrorMessage from "../ErrorMessage";
 import BaseButton from "../BaseButton";
-import { ILoginData } from "../../typescript/interfaces/login";
+import { ILoginData } from "../../typescript/interfaces/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { authUserSelector } from "../../store/selectors/auth";
+import { loginUser } from "../../store/actions/auth";
+import { hideModal } from "../../store/actions/modal";
 import styles from './index.module.scss';
+import { addNotification } from "../../store/actions/notification";
 
 
 const schema = yup.object({
@@ -14,6 +19,9 @@ const schema = yup.object({
 }).required();
 
 const Login = () => {
+    const dispatch = useDispatch()
+    const userData = useSelector(authUserSelector);
+
     const defaultValues: ILoginData = {
         email: '',
         password: '',
@@ -23,12 +31,12 @@ const Login = () => {
         defaultValues,
         resolver: yupResolver(schema)
     });
+
     const onSubmit = (data: ILoginData) => {
-
-        const user = JSON.parse(localStorage.getItem('user') || '{}');
-
-        if (user.email === data.email && user.password1 === data.password) {
-            localStorage.setItem('isLogin', "true")
+        if (userData.email === data.email && userData.password === data.password) {
+            dispatch(loginUser())
+            dispatch(hideModal())
+            dispatch(addNotification('You are logged in'))
         }
     };
 

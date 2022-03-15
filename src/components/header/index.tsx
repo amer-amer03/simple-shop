@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../store/actions/auth";
 import { openModal } from "../../store/actions/modal";
+import { addNotification } from "../../store/actions/notification";
+import { authIsLoginSelector, authUserSelector } from "../../store/selectors/auth";
 import { IProps } from "../../typescript/interfaces/props";
 import BaseButton from "../BaseButton";
 import BaseLink from "../BaseLink";
@@ -9,35 +11,9 @@ import styles from './index.module.scss';
 interface Props extends IProps { }
 
 const Header: React.FC<Props> = () => {
-
-    // const [user, setUser] = useState<any>()
-    // const [isLogin, setIsLogin] = useState<any>()
-
-    // useEffect(() => {
-    //     const checkUser = () => {
-    //         const user = JSON.parse(localStorage.getItem('user') || '{}');
-    //         if (user) {
-    //             setUser(user)
-    //         }
-    //     }
-    //     const checkIsLogin = () => {
-    //         const isLogin = localStorage.getItem('isLogin');
-    //         if (isLogin) {
-    //             setIsLogin(isLogin)
-    //         }
-    //     }
-
-    //     window.addEventListener('storage', checkUser)
-
-    //     window.addEventListener('storage', checkIsLogin)
-
-    //     return () => {
-    //         window.removeEventListener('storage', checkUser)
-    //         window.removeEventListener('storage', checkIsLogin)
-    //     }
-    // }, [])
-
     const dispatch = useDispatch()
+    const isLogin = useSelector(authIsLoginSelector);
+    const userData = useSelector(authUserSelector);
 
     const openCartModal = () => {
         dispatch(openModal('cart'))
@@ -51,11 +27,10 @@ const Header: React.FC<Props> = () => {
         dispatch(openModal('login'))
     }
 
-    const isLogin = localStorage.getItem('isLogin');
-    const user = JSON.parse(localStorage.getItem('user') || '{}');
-
     const logOut = () => {
-        localStorage.setItem('isLogin', "false")
+        dispatch(logoutUser())
+        dispatch(addNotification('You are logged out'))
+
     }
 
     return (
@@ -64,12 +39,11 @@ const Header: React.FC<Props> = () => {
                 SIMPLE SHOP
             </BaseLink>
             {
-                isLogin === 'true' ?
+                isLogin ?
                     <div className={styles.item}>
-                        <BaseButton onClick={logOut} value={`${user.name}: logout`} />
+                        <BaseButton onClick={logOut} value={`${userData.name}: logout`} />
                     </div>
                     :
-
                     <div className={styles.item}>
                         <div className={styles.button}>
                             <BaseButton onClick={openRegistrationModal} value='Sign in' />

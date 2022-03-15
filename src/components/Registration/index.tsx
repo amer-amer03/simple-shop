@@ -4,10 +4,15 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import LabelInput from "../LabelInput";
 import ErrorMessage from "../ErrorMessage";
 import BaseButton from "../BaseButton";
-import { IRegistrationData } from "../../typescript/interfaces/registration";
+import { IRegistrationData, IUserData } from "../../typescript/interfaces/auth";
 import { IProps } from "../../typescript/interfaces/props";
 import { passwordValidationRegex } from "../../utils/validation/regex";
 import styles from './index.module.scss';
+import { useDispatch, useSelector } from "react-redux";
+import { registerUser } from "../../store/actions/auth";
+import { authUserSelector } from "../../store/selectors/auth";
+import { hideModal } from "../../store/actions/modal";
+import { addNotification } from "../../store/actions/notification";
 
 const schema = yup.object({
     name: yup.string().required('This field is required'),
@@ -22,6 +27,8 @@ const schema = yup.object({
 interface Props extends IProps { }
 
 const Registration: React.FC<Props> = () => {
+    const dispatch = useDispatch()
+
     const defaultValues: IRegistrationData = {
         name: '',
         email: '',
@@ -35,9 +42,15 @@ const Registration: React.FC<Props> = () => {
         resolver: yupResolver(schema)
     });
     const onSubmit = (data: IRegistrationData) => {
-        const stringData = JSON.stringify(data);
-        localStorage.setItem("user", stringData)
-        localStorage.setItem("isLogin", 'true')
+        const userData: IUserData = {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            password: data.password1
+        }
+        dispatch(registerUser(userData))
+        dispatch(hideModal())
+        dispatch(addNotification('You have registered successfully'))
     }
 
     return (

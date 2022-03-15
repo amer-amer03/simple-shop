@@ -19,7 +19,7 @@ const loadingCatalogDataSuccess: ActionCreator<Action> = (catalogData: ICatalogD
     return { type: CatalogDataTypes.LOADING_CATALOGDATA_SUCCESS, catalogData }
 }
 
-// const loadingBaseInfoError: ActionCreator<Action> = () => {
+// const loadingBaseInfoError: ActionCreator<Action> = () => {  
 //     return { type: CatalogDataTypes.LOADING_CATALOGDATA_ERROR };
 // };
 

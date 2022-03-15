@@ -1,4 +1,4 @@
-import { IModalAction, modalTypes } from "../actions/modal";
+import { IModalAction, ModalTypes } from "../actions/modal";
 
 export interface IModalState {
     modalType: string,
@@ -10,9 +10,9 @@ export const initState: IModalState = {
 
 function modalReducer(state = initState, action: IModalAction): IModalState {
     switch (action.type) {
-        case modalTypes.SHOW_MODAL:
+        case ModalTypes.SHOW_MODAL:
             return { ...state, modalType: action.modalType ? action.modalType : '' }
-        case modalTypes.HIDE_MODAL:
+        case ModalTypes.HIDE_MODAL:
             return { ...state, modalType: '' }
     }
     return state
