@@ -7,9 +7,9 @@ interface Props extends IProps {
     type?: 'submit' | 'button'
 }
 
-const BaseButton: React.FC<Props> = ({ value, className, type = 'submit', ...props }) => {
+const BaseButton: React.FC<Props> = ({ value, className, type = 'submit', onClick }) => {
     return (
-        <button type={type} className={classNames(styles.button, className)}  {...props}>
+        <button type={type} className={classNames(styles.button, className)} onClick={onClick}>
             {value}
         </button>
     )

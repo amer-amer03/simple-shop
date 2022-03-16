@@ -11,6 +11,7 @@ import { loginUser } from "../../store/actions/auth";
 import { hideModal } from "../../store/actions/modal";
 import styles from './index.module.scss';
 import { addNotification } from "../../store/actions/notification";
+import BaseModal from "../BaseModal";
 
 
 const schema = yup.object({
@@ -40,8 +41,8 @@ const Login = () => {
         }
     };
 
-    return (
-        <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
+    const loginBody = (
+        <>
             <div>
                 <Controller
                     control={control}
@@ -72,9 +73,17 @@ const Login = () => {
                 />
                 {errors.password && <ErrorMessage value={errors.password.message} />}
             </div>
+        </>
+    )
 
-            <BaseButton className={styles.button} type="submit" value="submit" />
+    const loginFooter = (
+        <BaseButton type="submit" value="submit" />
+    )
+    return (
+        <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
+            <BaseModal title='login' body={loginBody} footer={loginFooter} />
         </form>
+
     )
 }
 

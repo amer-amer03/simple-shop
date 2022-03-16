@@ -4,6 +4,7 @@ import { decreaseCartItem, increaseCartItem } from '../../store/actions/cart';
 import { cartDataSelector } from '../../store/selectors/cart';
 import BaseButton from '../BaseButton';
 import BaseCheckbox from '../BaseCheckbox';
+import BaseModal from '../BaseModal';
 import BaseTypography from '../BaseTypography';
 import styles from './index.module.scss';
 
@@ -15,9 +16,11 @@ const Cart = () => {
         dispatch(increaseCartItem(i))
     }
     const handleDecreaseCartItem = (i: ICatalogDataResults) => {
+        console.log('increa')
         dispatch(decreaseCartItem(i))
     }
-    const cartContent = (
+
+    const cartBody = (
         cartData.map((i) => {
             return (
                 <div key={i.id} className={styles.item}>
@@ -52,11 +55,24 @@ const Cart = () => {
             )
         })
     )
+
+    const cartFooter = (
+        <div className={styles.footer}>
+            <BaseButton value='Continue shopping' />
+            <div className={styles.total}>
+                <div>
+                    total: {'20000'}
+                </div>
+                <BaseButton value='Finalize purchase' />
+            </div>
+
+        </div>
+    )
     return <div>
         <div className={styles.root}>
             {
-                cartData.length > 0 ? cartContent : <BaseTypography value='NO ITEMS' />
-            }   { }
+                cartData.length > 0 ? <BaseModal title='cart' body={cartBody} footer={cartFooter} /> : <BaseModal title='cart' body='NO ITEMS' />
+            }
         </div>
     </div>
 }

@@ -45,7 +45,6 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
                 <img className={styles.catalogImage} src={i.imageUrl} alt={i.title} />
                 <div>
                     <BaseTypography value={i.title} />
-
                 </div>
                 <div>
                     <BaseTypography value={`${i.rating}/5`} />

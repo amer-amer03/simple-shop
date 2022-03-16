@@ -12,6 +12,7 @@ import { hideModal } from "../../store/actions/modal";
 import { addNotification } from "../../store/actions/notification";
 import { IProps } from "../../interfaces/props";
 import styles from './index.module.scss';
+import BaseModal from "../BaseModal";
 
 const schema = yup.object({
     name: yup.string().required('This field is required'),
@@ -51,9 +52,8 @@ const Registration: React.FC<Props> = () => {
         dispatch(hideModal())
         dispatch(addNotification('You have registered successfully'))
     }
-
-    return (
-        <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
+    const registrationBody = (
+        <>
             <div>
                 <Controller
                     control={control}
@@ -130,9 +130,17 @@ const Registration: React.FC<Props> = () => {
                 Privacy policy
                 <span className={styles.tooltiptext}>By clicking submit you agree to our privacy policy and terms and conditions</span>
             </div>
-            <div className={styles.button}>
-                <BaseButton type="submit" value='submit' />
-            </div>
+        </>
+    )
+
+    const registrationFooter = (
+        <div className={styles.button}>
+            <BaseButton type="submit" value='submit' />
+        </div>
+    )
+    return (
+        <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
+            <BaseModal title='cart' body={registrationBody} footer={registrationFooter} />
         </form>
     )
 }
