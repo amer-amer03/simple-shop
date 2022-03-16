@@ -1,4 +1,4 @@
-import { ICatalogData } from "../../typescript/interfaces/catalog";
+import { ICatalogData } from "../../interfaces/catalog";
 import { CatalogDataTypes, ICatalogAction } from "../actions/catalog";
 
 export interface ICatalogState {

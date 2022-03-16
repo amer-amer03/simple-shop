@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
+import { IProps } from "../../interfaces/props";
 import { logoutUser } from "../../store/actions/auth";
 import { openModal } from "../../store/actions/modal";
 import { addNotification } from "../../store/actions/notification";
 import { authIsLoginSelector, authUserSelector } from "../../store/selectors/auth";
-import { IProps } from "../../typescript/interfaces/props";
 import BaseButton from "../BaseButton";
 import BaseLink from "../BaseLink";
 import styles from './index.module.scss';

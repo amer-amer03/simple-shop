@@ -4,6 +4,7 @@ import catalogReducer, { ICatalogState, initState as catalogState } from './redu
 import modalReducer, { IModalState, initState as modalState } from './reducers/modal';
 import authReducer, { IAuthState, initState as authState } from './reducers/auth';
 import notificationReducer, { INotificationState, initState as notificationState } from './reducers/notification';
+import cartReducer, { ICartState, initState as cartState } from './reducers/cart';
 import { persistStore } from "redux-persist";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
@@ -13,25 +14,29 @@ export interface ISimpleShopState {
     modal: IModalState
     auth: IAuthState
     notification: INotificationState
+    cart: ICartState
 }
 
 const initState: ISimpleShopState = {
     catalog: catalogState,
     modal: modalState,
     auth: authState,
-    notification: notificationState
+    notification: notificationState,
+    cart: cartState
 };
 
 const reducers = combineReducers({
     catalog: catalogReducer,
     modal: modalReducer,
     auth: authReducer,
-    notification: notificationReducer
+    notification: notificationReducer,
+    cart: cartReducer
+
 });
 
 const persistConfig = {
     key: "root",
-    whitelist: ['auth'],
+    whitelist: ['auth', 'cart'],
     storage,
 };
 

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { IProps } from "../../typescript/interfaces/props";
+import { IProps } from "../../interfaces/props";
 import styles from './index.module.scss';
 
 interface Props extends IProps {

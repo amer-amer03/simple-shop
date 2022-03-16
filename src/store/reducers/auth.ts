@@ -1,4 +1,4 @@
-import { IUserData } from "../../typescript/interfaces/auth";
+import { IUserData } from "../../interfaces/auth";
 import { AuthTypes, IAuthAction } from "../actions/auth";
 
 export interface IAuthState {

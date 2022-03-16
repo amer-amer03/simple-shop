@@ -1,5 +1,5 @@
 import { Action } from "@reduxjs/toolkit";
-import { IUserData } from "../../typescript/interfaces/auth";
+import { IUserData } from "../../interfaces/auth";
 
 export enum AuthTypes {
     REGISTRATION = 'REGISTRATION',

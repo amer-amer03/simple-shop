@@ -1,6 +1,6 @@
 import { Action, ActionCreator, Dispatch } from "redux";
 import { getCatalogData } from "../../api/catalog";
-import { ICatalogData, ICatalogDataResults } from "../../typescript/interfaces/catalog";
+import { ICatalogData, ICatalogDataResults } from "../../interfaces/catalog";
 
 export enum CatalogDataTypes {
     LOADING_CATALOGDATA_REQUEST = 'LOADING_CATALOGDATA_REQUEST',
@@ -19,11 +19,6 @@ const loadingCatalogDataSuccess: ActionCreator<Action> = (catalogData: ICatalogD
     return { type: CatalogDataTypes.LOADING_CATALOGDATA_SUCCESS, catalogData }
 }
 
-// const loadingBaseInfoError: ActionCreator<Action> = () => {  
-//     return { type: CatalogDataTypes.LOADING_CATALOGDATA_ERROR };
-// };
-
-
 export const loadingCatalogData = () => {
     return async (dispatch: Dispatch) => {
         dispatch(loadingCatalogDataRequest())
@@ -31,7 +26,6 @@ export const loadingCatalogData = () => {
             const catalogData = await getCatalogData();
             dispatch(loadingCatalogDataSuccess(catalogData))
         } catch (e) {
-            // dispatchError(dispatch, e, loadingCatalogDataError)
             console.log("failed to load")
         }
     }

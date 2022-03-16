@@ -1,8 +1,9 @@
 import { FC } from "react"
 import { createPortal } from "react-dom"
 import { useDispatch } from "react-redux";
+import { IProps } from "../../interfaces/props";
 import { hideModal } from "../../store/actions/modal";
-import { IProps } from "../../typescript/interfaces/props";
+import BaseTypography from "../BaseTypography";
 import Cart from "../Cart";
 import Close from "../icons/Close";
 import Login from "../Login";
@@ -39,10 +40,16 @@ const Modal: FC<Props> = ({ modalOpenType, children, ...props }) => {
     return createPortal(
         <div className={styles.root} >
             <div className={styles.modalContent} >
-                <button className={styles.button} onClick={handleHideModal}>
-                    <Close />
-                </button>
-                {modalContent(modalOpenType)}
+                <div className={styles.modalHeader}>
+                    <BaseTypography className={styles.title} value={modalOpenType} />
+                    <button className={styles.button} onClick={handleHideModal}>
+                        <Close />
+                    </button>
+                </div>
+                <div className={styles.body}>
+                    {modalContent(modalOpenType)}
+
+                </div>
             </div>
         </div>
         , document.body)

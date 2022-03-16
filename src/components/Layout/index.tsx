@@ -1,5 +1,5 @@
 import React from 'react';
-import { IProps } from '../../typescript/interfaces/props';
+import { IProps } from '../../interfaces/props';
 import Header from '../Header';
 import Notification from '../Notification';
 import styles from './index.module.scss';

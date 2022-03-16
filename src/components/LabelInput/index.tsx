@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { IProps } from "../../typescript/interfaces/props";
+import { IProps } from "../../interfaces/props";
 import BaseInput from "../BaseInput"
 import BaseTypography from "../BaseTypography";
 import styles from './index.module.scss';

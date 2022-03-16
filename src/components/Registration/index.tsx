@@ -4,15 +4,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import LabelInput from "../LabelInput";
 import ErrorMessage from "../ErrorMessage";
 import BaseButton from "../BaseButton";
-import { IRegistrationData, IUserData } from "../../typescript/interfaces/auth";
-import { IProps } from "../../typescript/interfaces/props";
+import { IRegistrationData, IUserData } from "../../interfaces/auth";
 import { passwordValidationRegex } from "../../utils/validation/regex";
-import styles from './index.module.scss';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { registerUser } from "../../store/actions/auth";
-import { authUserSelector } from "../../store/selectors/auth";
 import { hideModal } from "../../store/actions/modal";
 import { addNotification } from "../../store/actions/notification";
+import { IProps } from "../../interfaces/props";
+import styles from './index.module.scss';
 
 const schema = yup.object({
     name: yup.string().required('This field is required'),

@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import { ChangeEvent } from "react";
-import { IProps } from "../../typescript/interfaces/props";
+import { IProps } from "../../interfaces/props";
 import styles from './index.module.scss';
 
 interface Props extends IProps {

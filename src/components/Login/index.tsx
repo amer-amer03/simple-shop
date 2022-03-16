@@ -4,7 +4,7 @@ import { Controller, useForm } from "react-hook-form";
 import LabelInput from "../LabelInput";
 import ErrorMessage from "../ErrorMessage";
 import BaseButton from "../BaseButton";
-import { ILoginData } from "../../typescript/interfaces/auth";
+import { ILoginData } from "../../interfaces/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { authUserSelector } from "../../store/selectors/auth";
 import { loginUser } from "../../store/actions/auth";
