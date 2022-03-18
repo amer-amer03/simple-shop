@@ -1,67 +1,37 @@
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ICatalogDataResults } from '../../interfaces/catalog';
-import { decreaseCartItem, increaseCartItem } from '../../store/actions/cart';
+import { IProps } from '../../interfaces/props';
 import { cartDataSelector } from '../../store/selectors/cart';
 import BaseButton from '../BaseButton';
-import BaseCheckbox from '../BaseCheckbox';
 import BaseModal from '../BaseModal';
-import BaseTypography from '../BaseTypography';
+import CartItem from '../CartItem';
 import styles from './index.module.scss';
 
-const Cart = () => {
-    const cartData = useSelector(cartDataSelector)
-    const dispatch = useDispatch()
+interface Props extends IProps {
+}
 
-    const handleIncreaseCartItem = (i: ICatalogDataResults) => {
-        dispatch(increaseCartItem(i))
-    }
-    const handleDecreaseCartItem = (i: ICatalogDataResults) => {
-        console.log('increa')
-        dispatch(decreaseCartItem(i))
-    }
+const Cart: React.FC<Props> = () => {
+    const cartData = useSelector(cartDataSelector)
+
+    const [grandTotal, setGrandTotal] = useState<number[]>(new Array(cartData.length).fill(0));
+    console.log(cartData)
+    useEffect(() => {
+        setGrandTotal(new Array(cartData.length).fill(0))
+    }, [cartData.length])
 
     const cartBody = (
-        cartData.map((i) => {
-            return (
-                <div key={i.id} className={styles.item}>
-                    <div className={styles.top}>
-                        <img className={styles.image} src={i.imageUrl} alt="" />
-                        <div>
-                            <div>
-                                <div className={styles.title}>
-                                    <BaseTypography value={i.title} />
-                                </div>
-                                <div >
-                                    <BaseCheckbox label={`${i.specs.antivirus.description} - ${i.specs.antivirus.price} ₴`} />
-                                    <BaseCheckbox label={`${i.specs.os.description} - ${i.specs.os.price} ₴`} />
-                                    <BaseCheckbox label={`${i.specs.screenCare.description} - ${i.specs.screenCare.price} ₴`} />
-                                    <BaseCheckbox label={`${i.specs.antivirus.description} - ${i.specs.antivirus.price} ₴`} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.bottom}>
-                        <div className={styles.quantityButtons}>
-                            <BaseButton onClick={() => handleDecreaseCartItem(i)} value={'-'} />
-                            <BaseTypography className={styles.quantity} value={`${i.quantity}`} />
-                            <BaseButton onClick={() => handleIncreaseCartItem(i)} value={'+'} />
-                        </div>
-                        <div className={styles.price}>
-                            <BaseTypography value={`${i.price} ₴`} />
-                        </div>
-                    </div>
-
-                </div>
-            )
+        cartData.map((item, index) => {
+            return <CartItem key={item.id} item={item} index={index} setGrandTotal={setGrandTotal} grandTotal={grandTotal} />
         })
     )
+    console.log(grandTotal, 'grandTotal')
 
     const cartFooter = (
         <div className={styles.footer}>
             <BaseButton value='Continue shopping' />
             <div className={styles.total}>
                 <div>
-                    total: {'20000'}
+                    total: {grandTotal.reduce((previousValue, currentValue) => previousValue + currentValue)}
                 </div>
                 <BaseButton value='Finalize purchase' />
             </div>

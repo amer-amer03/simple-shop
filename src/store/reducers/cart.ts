@@ -1,6 +1,6 @@
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { CartTypes, ICartAction } from "../actions/cart";
-import { decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem } from "./utils";
+import { decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem, toggleSpecs } from "./utils";
 
 export interface ICartState {
     cart: ICatalogDataResults[]
@@ -32,9 +32,15 @@ function cartReducer(state = initState, action: ICartAction): ICartState {
                 cart: updatedItems,
             };
         }
-
         case CartTypes.REMOVE_CART_ITEM: {
             const updatedItems = removeCartItem(state.cart, action.item);
+            return {
+                ...state,
+                cart: updatedItems,
+            };
+        }
+        case CartTypes.TOGGLE_SPECS: {
+            const updatedItems = toggleSpecs(action.item, action.currentSpec);
             return {
                 ...state,
                 cart: updatedItems,

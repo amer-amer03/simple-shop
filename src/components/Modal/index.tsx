@@ -1,10 +1,7 @@
 import { FC } from "react"
 import { createPortal } from "react-dom"
-import { useDispatch } from "react-redux";
 import { IProps } from "../../interfaces/props";
-import { hideModal } from "../../store/actions/modal";
 import Cart from "../Cart";
-import Close from "../icons/Close";
 import Login from "../Login";
 import Registration from "../Registration";
 import styles from './index.module.scss';
@@ -14,9 +11,6 @@ interface Props extends IProps {
 }
 
 const Modal: FC<Props> = ({ modalOpenType, children, ...props }) => {
-
-
-
     const modalContent = (openModalType: string) => {
         switch (openModalType) {
             case 'registration':

@@ -10,16 +10,14 @@ export interface ICatalogDataResults {
     price: number;
     priceSale: number;
     quantity?: number;
-    specs: ISpecs;
+    specs: ISpecs[];
 }
 
 export interface ISpecs {
-    antivirus: ISpecsDescription;
-    os: ISpecsDescription;
-    screenCare: ISpecsDescription;
+    title: string;
+    price: number;
+    description: string;
+    checked?: boolean
 }
 
-export interface ISpecsDescription {
-    price: number;
-    description: string
-}
+

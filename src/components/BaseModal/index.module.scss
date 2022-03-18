@@ -7,7 +7,7 @@
     padding: 20px 30px;
     box-shadow: 0 8px 40px rgb(73, 71, 71);
     border-radius: 8px;
-    max-height: 80%;
+    max-height: 80vh;
     .button {
         position: absolute;
         background: none;
@@ -28,7 +28,7 @@
         }
     }
     .body {
-        overflow-y: auto;
+        overflow-y: overlay;
         height: auto;
         margin-top: 10px;
         width: 100%;

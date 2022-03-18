@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
 import { increaseCartItem } from "../../store/actions/cart";
+import { addNotification } from "../../store/actions/notification";
 import BaseButton from "../BaseButton";
 import BaseTypography from "../BaseTypography";
 import styles from './index.module.scss';
@@ -37,6 +38,7 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
 
     const handleAddCartItem = (i: ICatalogDataResults) => {
         dispatch(increaseCartItem(i))
+        dispatch(addNotification(i.title + '- added to cart'))
     }
 
     const catalogContent = itemsToShow.map((i) => {
