@@ -10,8 +10,9 @@ export enum CartTypes {
 
 export interface ICartAction extends Action {
     item: ICatalogDataResults;
-    currentSpec: string;
+    selectedSpec: string;
 }
+
 export const increaseCartItem = (item: ICatalogDataResults) => {
     return { type: CartTypes.INCREASE_CART_ITEM, item };
 };
@@ -24,6 +25,6 @@ export const removeCartItem = (item: ICatalogDataResults) => {
     return { type: CartTypes.REMOVE_CART_ITEM, item };
 };
 
-export const toggleSpecs = (item: ICatalogDataResults, currentSpec: string) => {
-    return { type: CartTypes.TOGGLE_SPECS, item, currentSpec };
+export const toggleSpecs = (selectedSpec: string, item: ICatalogDataResults) => {
+    return { type: CartTypes.TOGGLE_SPECS, selectedSpec, item };
 };

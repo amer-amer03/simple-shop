@@ -38,24 +38,20 @@ export const decreaseCartItemQuantity = (allCartItems: ICatalogDataResults[], cu
     return updatedItems;
 };
 
-export const toggleSpecs = (currentCartItem: ICatalogDataResults, currentSpecTitle: string) => {
+export const toggleSpecs = (allCartItems: ICatalogDataResults[], selectedSpec: string, currentCartItem: ICatalogDataResults) => {
     let updatedItems = [];
+    const itemExist = allCartItems.find((cartItem) => {
+        return cartItem.id === currentCartItem.id;
+    });
 
-    console.log(currentCartItem)
+    updatedItems = allCartItems.map((cartItem) => {
+        return cartItem.id === currentCartItem.id && console.log(cartItem.specs);
+    });
 
-    updatedItems = currentCartItem?.specs.map((spec) => {
-        return spec.title === currentSpecTitle
-            ? { ...spec, spec: spec.checked } : spec
-    })
-    // if (itemExist) {
-    //     console.log(itemExist)
-    //     updatedItems = allCartItems.map((cartItem) => {
-    //         return cartItem.id === currentCartItem.id
-    //             ? { ...cartItem.specs.map, specs: cartItem.specs && !cartItem.specs }
-    //             : cartItem;
-    //     });
-    // } else {
-    //     updatedItems = [...allCartItems, { ...currentCartItem, specs: cartItem.specs }];
-    // }
-    return [currentCartItem];
+    // updatedItems = allCartItems.map((cartItem) => {
+    //     return cartItem.id === currentCartItem.id
+    //         ? { ...cartItem, quantity: cartItem.quantity && cartItem.quantity - 1 }
+    //         : cartItem;
+    // });
+    return allCartItems;
 };

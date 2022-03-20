@@ -13,25 +13,18 @@ interface Props extends IProps {
 const Cart: React.FC<Props> = () => {
     const cartData = useSelector(cartDataSelector)
 
-    const [grandTotal, setGrandTotal] = useState<number[]>(new Array(cartData.length).fill(0));
-    console.log(cartData)
-    useEffect(() => {
-        setGrandTotal(new Array(cartData.length).fill(0))
-    }, [cartData.length])
-
     const cartBody = (
         cartData.map((item, index) => {
-            return <CartItem key={item.id} item={item} index={index} setGrandTotal={setGrandTotal} grandTotal={grandTotal} />
+            return <CartItem key={item.id} item={item} index={index} />
         })
     )
-    console.log(grandTotal, 'grandTotal')
 
     const cartFooter = (
         <div className={styles.footer}>
             <BaseButton value='Continue shopping' />
             <div className={styles.total}>
                 <div>
-                    total: {grandTotal.reduce((previousValue, currentValue) => previousValue + currentValue)}
+                    total: {121}
                 </div>
                 <BaseButton value='Finalize purchase' />
             </div>

@@ -40,7 +40,7 @@ function cartReducer(state = initState, action: ICartAction): ICartState {
             };
         }
         case CartTypes.TOGGLE_SPECS: {
-            const updatedItems = toggleSpecs(action.item, action.currentSpec);
+            const updatedItems = toggleSpecs(state.cart, action.selectedSpec, action.item);
             return {
                 ...state,
                 cart: updatedItems,

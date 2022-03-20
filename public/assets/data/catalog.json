@@ -6,20 +6,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":2,
@@ -28,20 +31,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":3,
@@ -50,20 +56,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":4,
@@ -72,20 +81,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":5,
@@ -94,20 +106,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":6,
@@ -116,20 +131,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":7,
@@ -138,20 +156,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":8,
@@ -160,20 +181,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":9,
@@ -182,20 +206,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":10,
@@ -204,20 +231,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":11,
@@ -226,20 +256,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":12,
@@ -248,20 +281,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":13,
@@ -270,20 +306,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":14,
@@ -292,20 +331,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":15,
@@ -314,20 +356,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":16,
@@ -336,20 +381,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":17,
@@ -358,20 +406,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":18,
@@ -380,20 +431,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":19,
@@ -402,20 +456,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":20,
@@ -424,20 +481,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":21,
@@ -446,20 +506,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":22,
@@ -468,20 +531,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":23,
@@ -490,20 +556,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":24,
@@ -512,20 +581,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":25,
@@ -534,20 +606,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":26,
@@ -556,20 +631,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":27,
@@ -578,20 +656,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":28,
@@ -600,20 +681,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":29,
@@ -622,20 +706,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":30,
@@ -644,20 +731,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":31,
@@ -666,20 +756,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":32,
@@ -688,20 +781,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":33,
@@ -710,20 +806,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":34,
@@ -732,20 +831,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":35,
@@ -754,20 +856,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":36,
@@ -776,20 +881,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":37,
@@ -798,20 +906,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":38,
@@ -820,20 +931,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":39,
@@ -842,20 +956,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":40,
@@ -864,20 +981,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":41,
@@ -886,20 +1006,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":42,
@@ -908,20 +1031,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":43,
@@ -930,20 +1056,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":44,
@@ -952,20 +1081,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":45,
@@ -974,20 +1106,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":46,
@@ -996,20 +1131,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":47,
@@ -1018,20 +1156,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":48,
@@ -1040,20 +1181,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":49,
@@ -1062,20 +1206,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":50,
@@ -1084,20 +1231,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":51,
@@ -1106,20 +1256,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":52,
@@ -1128,20 +1281,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":53,
@@ -1150,20 +1306,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":54,
@@ -1172,20 +1331,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":55,
@@ -1194,20 +1356,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":56,
@@ -1216,20 +1381,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":57,
@@ -1238,20 +1406,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":58,
@@ -1260,20 +1431,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":59,
@@ -1282,20 +1456,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":60,
@@ -1304,20 +1481,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":61,
@@ -1326,20 +1506,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":62,
@@ -1348,20 +1531,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":63,
@@ -1370,20 +1556,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":64,
@@ -1392,20 +1581,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":65,
@@ -1414,20 +1606,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":66,
@@ -1436,20 +1631,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":67,
@@ -1458,20 +1656,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":68,
@@ -1480,20 +1681,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":69,
@@ -1502,20 +1706,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":70,
@@ -1524,20 +1731,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":71,
@@ -1546,20 +1756,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":72,
@@ -1568,20 +1781,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":73,
@@ -1590,20 +1806,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":74,
@@ -1612,20 +1831,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":75,
@@ -1634,20 +1856,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":76,
@@ -1656,20 +1881,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":77,
@@ -1678,20 +1906,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":78,
@@ -1700,20 +1931,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":79,
@@ -1722,20 +1956,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":80,
@@ -1744,20 +1981,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":81,
@@ -1766,20 +2006,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":82,
@@ -1788,20 +2031,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":83,
@@ -1810,20 +2056,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":84,
@@ -1832,20 +2081,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":85,
@@ -1854,20 +2106,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":86,
@@ -1876,20 +2131,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":87,
@@ -1898,20 +2156,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":88,
@@ -1920,20 +2181,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":89,
@@ -1942,20 +2206,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":90,
@@ -1964,20 +2231,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":91,
@@ -1986,20 +2256,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":92,
@@ -2008,20 +2281,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":93,
@@ -2030,20 +2306,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":94,
@@ -2052,20 +2331,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":95,
@@ -2074,20 +2356,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":96,
@@ -2096,20 +2381,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":97,
@@ -2118,20 +2406,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":98,
@@ -2140,20 +2431,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":99,
@@ -2162,20 +2456,23 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
         },
     {
         "id":100,
@@ -2184,19 +2481,22 @@
         "rating": 4,
         "price": 3000,
         "priceSale":2750,
-        "specs": [
-            {   "title" : "antivirus",
+        "specs": {
+            "antivirus": {
+                "title": "antivirus",
                 "price": 980,
                 "description":  "Antivirus ESEt Internet Security license"
             },
-            {   "title" : "os",
+            "os": {
+                "title": "os",
                 "price": 2100,
                 "description":  "OS Windows 10 home edition 32/64-bit"
             },
-            {   "title" : "screencare",
+            "screencare": {
+                "title": "screencare",
                 "price": 105,
                 "description": "Pre-Moistened Electronic Wipes, Surface Cleaning for Computers"
             }
-        ]
+        }
     }
 ]
