@@ -10,7 +10,7 @@ const CatalogPage = () => {
 
     useEffect(() => {
         dispatch(loadingCatalogData())
-    }, [])
+    }, [dispatch])
 
     return (
         <>

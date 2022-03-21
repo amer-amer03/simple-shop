@@ -10,9 +10,9 @@ interface Props extends IProps {
     type?: string;
 }
 
-const BaseInput: React.FC<Props> = ({ placeholder, className, type = 'text', ...props }) => {
+const BaseInput: React.FC<Props> = ({ placeholder, className, type = 'text' }) => {
     return (
-        <input type={type} placeholder={placeholder} className={classNames(styles.baseInput, className)} {...props} />
+        <input type={type} placeholder={placeholder} className={classNames(styles.baseInput, className)} />
     )
 }
 export default BaseInput

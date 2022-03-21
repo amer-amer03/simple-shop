@@ -4,9 +4,9 @@ import styles from './index.module.scss';
 interface Props extends IProps {
 }
 
-const BaseTypography: React.FC<Props> = ({ value, ...props }) => {
+const BaseTypography: React.FC<Props> = ({ value }) => {
     return (
-        <span className={styles.root}  {...props}>
+        <span className={styles.root}  >
             {value}
         </span>
     )

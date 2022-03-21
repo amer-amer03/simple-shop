@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
@@ -26,9 +26,15 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
 
     const dispatch = useDispatch()
 
+    const loop = useCallback((start: number, end: number) => {
+        const slicedCatalog = orderedCatalog.slice(start, end);
+        catalogArray = [...catalogArray, ...slicedCatalog];
+        setItemsToShow(catalogArray);
+    }, [orderedCatalog])
+
     useEffect(() => {
-        loopWithSlice(0, itemsPerPage);
-    }, [orderedCatalog]);
+        loop(0, itemsPerPage);
+    }, [orderedCatalog, loop]);
 
     useEffect(() => {
         catalogArray = []
@@ -48,19 +54,12 @@ const Catalog: React.FC<Props> = ({ catalog }) => {
             const orderedCatalog = catalog.sort((a, b) => b.rating - a.price)
             setOrderedCatalog(orderedCatalog)
         }
-        loopWithSlice(0, itemsPerPage);
+        loop(0, itemsPerPage);
+    }, [sortOrder, catalog, loop])
 
-    }, [sortOrder, catalog])
-
-
-    const loopWithSlice = (start: number, end: number) => {
-        const slicedCatalog = orderedCatalog.slice(start, end);
-        catalogArray = [...catalogArray, ...slicedCatalog];
-        setItemsToShow(catalogArray);
-    };
 
     const handleShowMorePosts = () => {
-        loopWithSlice(next, next + itemsPerPage);
+        loop(next, next + itemsPerPage);
         setNext(next + itemsPerPage);
     };
 

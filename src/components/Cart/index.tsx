@@ -8,7 +8,7 @@ import { addNotification } from '../../store/actions/notification';
 import { cartDataSelector, cartTotalPriceSelector } from '../../store/selectors/cart';
 import BaseButton from '../BaseButton';
 import BaseModal from '../BaseModal';
-import BasePdf from '../BasePdf';
+import PurchaseFinalizePdf from '../PurchaseFinalizePdf';
 import BaseTypography from '../BaseTypography';
 import CartItem from '../CartItem';
 import styles from './index.module.scss';
@@ -22,11 +22,11 @@ const Cart: React.FC<Props> = () => {
 
     useEffect(() => {
         let cartTotal = 0
-        cartData.map((item) => {
+        cartData.forEach((item) => {
             cartTotal += item.totalPrice ? item.totalPrice : 0
         })
         dispatch(setCartTotal(cartTotal))
-    }, [cartData])
+    }, [cartData, dispatch])
 
     const handleCloseModal = () => {
         dispatch(hideModal())
@@ -50,7 +50,7 @@ const Cart: React.FC<Props> = () => {
                 <div>
                     total: {cartTotalPrice}
                 </div>
-                <PDFDownloadLink document={<BasePdf />} fileName="FORM" > <BaseButton onClick={finalizePurchase} value='Finalize purchase' />  </PDFDownloadLink>
+                <PDFDownloadLink document={<PurchaseFinalizePdf />} fileName="FORM" > <BaseButton onClick={finalizePurchase} value='Finalize purchase' />  </PDFDownloadLink>
             </div>
         </div>
     )

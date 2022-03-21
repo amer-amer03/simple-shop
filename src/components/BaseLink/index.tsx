@@ -8,9 +8,9 @@ interface Props extends IProps {
     to: string;
 }
 
-const BaseLink: FC<Props> = ({ to, className, children, ...props }) => {
+const BaseLink: FC<Props> = ({ to, className, children, }) => {
     return (
-        <Link className={classNames(styles.baseLink, className)} to={to} {...props}>
+        <Link className={classNames(styles.baseLink, className)} to={to} >
             {children}
         </Link>
     );

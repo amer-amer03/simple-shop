@@ -1,6 +1,6 @@
 import { Page, Text, Image, Document } from "@react-pdf/renderer"
 
-const BasePdf = () => {
+const PurchaseFinalizePdf = () => {
 
 
     return (
@@ -13,4 +13,4 @@ const BasePdf = () => {
         </Document>
     )
 }
-export default BasePdf
+export default PurchaseFinalizePdf

@@ -16,7 +16,7 @@ const Notification = () => {
                 dispatch(removeNotification())
             }, 3000)
         }
-    }, [notificationType])
+    }, [notificationType, dispatch])
 
     if (!notificationType) return null
 
