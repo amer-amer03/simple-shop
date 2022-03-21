@@ -34,7 +34,6 @@ const Header: React.FC<Props> = () => {
         dispatch(logoutUser())
         dispatch(addNotification('You have logged out'))
     }
-    console.log(cartItemsQuantity)
     return (
         <div className={styles.root}>
             <BaseLink to='/' >
