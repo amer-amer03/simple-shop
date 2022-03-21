@@ -1,5 +1,4 @@
 import { IProps } from '../../interfaces/props';
-import BaseInput from '../BaseInput';
 import styles from './index.module.scss';
 
 interface Props extends IProps {

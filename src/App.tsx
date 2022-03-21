@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import CatalogPage from './pages/CatalogPage';
@@ -10,12 +10,6 @@ import Layout from './components/Layout';
 
 const App: FC = () => {
   const openModalType = useSelector(modalSelector);
-
-  const Modal2 = () => {
-    return <div>
-      content2
-    </div>
-  }
 
   return (
     <div className="App">

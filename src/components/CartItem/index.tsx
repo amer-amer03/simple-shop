@@ -1,10 +1,8 @@
-import { totalmem } from "os";
-import { useEffect, useRef, useState } from "react"
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react"
+import { useDispatch } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog"
 import { IProps } from "../../interfaces/props"
 import { decreaseCartItem, setTotalItemPrice, increaseCartItem, toggleSpecs, removeCartItem } from "../../store/actions/cart";
-import { cartDataSelector } from "../../store/selectors/cart";
 import BaseButton from "../BaseButton";
 import BaseCheckbox from "../BaseCheckbox"
 import BaseTypography from "../BaseTypography";
@@ -32,12 +30,13 @@ const CartItem: React.FC<Props> = ({ item }) => {
     }
 
     useEffect(() => {
+
         let totalSpecsPrice = item.quantity ? item.priceSale * item.quantity : item.priceSale
-        item.specs.map((spec) => {
+        item.specs.forEach((spec) => {
             if (spec.checked) totalSpecsPrice += spec.price
         })
         dispatch(setTotalItemPrice(item, totalSpecsPrice))
-    }, [item.specs, item.quantity])
+    }, [item, item.specs, item.quantity, dispatch])
 
     const handleRemoveItem = () => {
         dispatch(removeCartItem(item))

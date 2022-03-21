@@ -1,4 +1,3 @@
-import { LegacyRef } from 'react';
 import { IProps } from '../../interfaces/props';
 import styles from './index.module.scss';
 
