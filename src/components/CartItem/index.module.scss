@@ -1,14 +1,22 @@
+@import "../../styles/mixin";
+
 .item {
     display: flex;
     flex-direction: column;
-    width: 900px;
-    padding-top: 20px;
-    margin: 10px 20px 10px 0px;
+    padding: 20px 0px;
+    margin: 10px 35px 10px 0px;
     border-top: 1px solid rgb(255, 172, 172);
 }
 .top {
     display: flex;
     justify-content: space-around;
+    position: relative;
+    .removeItemButton {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        cursor: pointer;
+    }
     .title {
         font-size: 18px;
         padding-bottom: 10px;
@@ -43,5 +51,15 @@
             margin-right: 20px;
             font-size: 20px;
         }
+    }
+}
+
+@include sm-max {
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        margin-right: 20px;
     }
 }

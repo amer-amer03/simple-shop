@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { IProps } from "../../interfaces/props";
 import Cart from "../Cart";
@@ -10,7 +10,13 @@ interface Props extends IProps {
     modalOpenType: string;
 }
 
-const Modal: FC<Props> = ({ modalOpenType, children, ...props }) => {
+const Modal: FC<Props> = ({ modalOpenType }) => {
+
+    useEffect(() => {
+        if (modalOpenType) document.body.style.overflow = 'hidden'
+        if (!modalOpenType) document.body.style.overflow = 'auto'
+    }, [modalOpenType])
+
     const modalContent = (openModalType: string) => {
         switch (openModalType) {
             case 'registration':

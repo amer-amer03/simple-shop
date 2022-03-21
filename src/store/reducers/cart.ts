@@ -1,15 +1,16 @@
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { CartTypes, ICartAction } from "../actions/cart";
-import { decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem, toggleSpecs } from "./utils";
+import { decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem, setTotalPrice, toggleSpecs } from "./utils";
 
 export interface ICartState {
     cart: ICatalogDataResults[]
+    totalPrice: number
 }
 
 export const initState: ICartState = {
-    cart: []
+    cart: [],
+    totalPrice: 0
 }
-
 function cartReducer(state = initState, action: ICartAction): ICartState {
     switch (action.type) {
         case CartTypes.INCREASE_CART_ITEM: {
@@ -40,10 +41,29 @@ function cartReducer(state = initState, action: ICartAction): ICartState {
             };
         }
         case CartTypes.TOGGLE_SPECS: {
-            const updatedItems = toggleSpecs(state.cart, action.selectedSpec, action.item);
+            const updatedItems = toggleSpecs(state.cart, action.item, action.selectedSpec);
             return {
                 ...state,
                 cart: updatedItems,
+            };
+        }
+        case CartTypes.SET_TOTAL_PRICE: {
+            const updatedItems = setTotalPrice(state.cart, action.item, action.totalPrice);
+            return {
+                ...state,
+                cart: updatedItems,
+            };
+        }
+        case CartTypes.SET_CART_TOTAL_PRICE: {
+            return {
+                ...state,
+                totalPrice: action.cartTotalPrice,
+            };
+        }
+        case CartTypes.CLEAR_CART: {
+            return {
+                ...state,
+                cart: [],
             };
         }
     }

@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { FC, ReactNode } from "react"
 import { useDispatch } from "react-redux";
 import { IProps } from "../../interfaces/props"
@@ -11,14 +12,14 @@ interface Props extends IProps {
     footer?: ReactNode;
 }
 
-const BaseModal: FC<Props> = ({ title, body, footer }) => {
+const BaseModal: FC<Props> = ({ title, body, footer, className }) => {
     const dispatch = useDispatch()
 
     const handleHideModal = () => {
         dispatch(hideModal())
     }
     return (
-        <div className={styles.root} >
+        <div className={classNames(styles.root, className)} >
             <div className={styles.button} onClick={handleHideModal}>
                 <Close />
             </div>

@@ -1,12 +1,14 @@
+import { totalmem } from "os";
 import { useEffect, useRef, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog"
 import { IProps } from "../../interfaces/props"
-import { decreaseCartItem, increaseCartItem, toggleSpecs } from "../../store/actions/cart";
+import { decreaseCartItem, setTotalItemPrice, increaseCartItem, toggleSpecs, removeCartItem } from "../../store/actions/cart";
 import { cartDataSelector } from "../../store/selectors/cart";
 import BaseButton from "../BaseButton";
 import BaseCheckbox from "../BaseCheckbox"
 import BaseTypography from "../BaseTypography";
+import Close from "../icons/Close";
 import styles from './index.module.scss';
 
 interface Props extends IProps {
@@ -25,35 +27,46 @@ const CartItem: React.FC<Props> = ({ item }) => {
         dispatch(decreaseCartItem(i))
     }
 
-    const handletoggleSpecs = (e: React.ChangeEvent<HTMLInputElement>, item: ICatalogDataResults) => {
-        dispatch(toggleSpecs(e.target.value, item))
+    const handletoggleSpecs = (item: ICatalogDataResults, spec: string) => {
+        dispatch(toggleSpecs(item, spec))
     }
-    console.log(item.specs.antivirus)
+
+    useEffect(() => {
+        let totalSpecsPrice = item.quantity ? item.priceSale * item.quantity : item.priceSale
+        item.specs.map((spec) => {
+            if (spec.checked) totalSpecsPrice += spec.price
+        })
+        dispatch(setTotalItemPrice(item, totalSpecsPrice))
+    }, [item.specs, item.quantity])
+
+    const handleRemoveItem = () => {
+        dispatch(removeCartItem(item))
+    }
+
     return (
         <div key={item.id} className={styles.item}>
             <div className={styles.top}>
-                <img className={styles.image} src={item.imageUrl} alt="" />
+                <div className={styles.removeItemButton} onClick={handleRemoveItem}>
+                    <Close />
+                </div>
+                <div>
+                    <img className={styles.image} src={item.imageUrl} alt="" />
+                </div>
                 <div>
                     <div className={styles.title}>
                         <BaseTypography value={item.title} />
                     </div>
                     <div >
-                        <BaseCheckbox
-                            value={`${item.specs.antivirus}`}
-                            checked={item.specs.antivirus.checked ? item.specs.antivirus.checked : false}
-                            onChange={(e) => handletoggleSpecs(e, item)}
-                            label={`${item.specs.antivirus.title}- ${item.specs.antivirus.description} -  ₴${`${item.specs.antivirus.price}`}`} />
-                        <BaseCheckbox
-                            value={`${item.specs.os.title}`}
-                            checked={item.specs.os.checked ? item.specs.os.checked : false}
-                            onChange={(e) => handletoggleSpecs(e, item)}
-                            label={`${item.specs.os.title}- ${item.specs.os.description} - ₴${`${item.specs.os.price}`}`} />
-                        <BaseCheckbox
-                            value={`${item.specs.screencare.title}`}
-                            checked={item.specs.screencare.checked ? item.specs.screencare.checked : false}
-                            onChange={(e) => handletoggleSpecs(e, item)}
-                            label={`${item.specs.screencare.title}- ${item.specs.screencare.description} -  ₴${`${item.specs.screencare.price}`}`} />
-
+                        {item.specs.map((spec) => {
+                            return (
+                                <BaseCheckbox
+                                    key={spec.title}
+                                    checked={spec.checked && spec.checked !== undefined ? spec.checked : false}
+                                    onChange={() => handletoggleSpecs(item, spec.title)}
+                                    value={`${item.quantity}`}
+                                    label={`${spec.title}- ${spec.description} -  ₴${spec.price}`} />
+                            )
+                        })}
                     </div>
                 </div>
             </div>
@@ -64,7 +77,7 @@ const CartItem: React.FC<Props> = ({ item }) => {
                     <BaseButton onClick={() => handleIncreaseCartItem(item)} value={'+'} />
                 </div>
                 <div className={styles.price}>
-                    <BaseTypography value={`${item.totalPrice && item.totalPrice} ₴`} />
+                    <BaseTypography value={item.totalPrice} />
                 </div>
             </div>
 
