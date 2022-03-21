@@ -3,13 +3,20 @@
 .item {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    margin: 10px 20px 10px 0px;
+    padding: 20px 0px;
+    margin: 10px 35px 10px 0px;
     border-top: 1px solid rgb(255, 172, 172);
 }
 .top {
     display: flex;
     justify-content: space-around;
+    position: relative;
+    .removeItemButton {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        cursor: pointer;
+    }
     .title {
         font-size: 18px;
         padding-bottom: 10px;
@@ -47,23 +54,12 @@
     }
 }
 
-.emptyCart {
-    display: flex;
-    width: 300px;
-    height: 200px;
-    &Text {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 20px;
+@include sm-max {
+    .item {
+        display: flex;
+        flex-direction: column;
     }
-}
-.modal {
-    width: 80vw;
-    max-width: 920px;
-}
-
-@include lg-max {
-    .modal {
-        width: 90vw;
+    .image {
+        margin-right: 20px;
     }
 }

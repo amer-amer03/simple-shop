@@ -1,78 +1,75 @@
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ICatalogDataResults } from '../../interfaces/catalog';
-import { decreaseCartItem, increaseCartItem } from '../../store/actions/cart';
-import { cartDataSelector } from '../../store/selectors/cart';
+import { IProps } from '../../interfaces/props';
+import { clearCart, setCartTotal } from '../../store/actions/cart';
+import { hideModal } from '../../store/actions/modal';
+import { addNotification } from '../../store/actions/notification';
+import { cartDataSelector, cartTotalPriceSelector } from '../../store/selectors/cart';
 import BaseButton from '../BaseButton';
-import BaseCheckbox from '../BaseCheckbox';
 import BaseModal from '../BaseModal';
+import BasePdf from '../BasePdf';
 import BaseTypography from '../BaseTypography';
+import CartItem from '../CartItem';
 import styles from './index.module.scss';
+interface Props extends IProps {
+}
 
-const Cart = () => {
+const Cart: React.FC<Props> = () => {
     const cartData = useSelector(cartDataSelector)
+    const cartTotalPrice = useSelector(cartTotalPriceSelector)
     const dispatch = useDispatch()
 
-    const handleIncreaseCartItem = (i: ICatalogDataResults) => {
-        dispatch(increaseCartItem(i))
-    }
-    const handleDecreaseCartItem = (i: ICatalogDataResults) => {
-        console.log('increa')
-        dispatch(decreaseCartItem(i))
+    useEffect(() => {
+        let cartTotal = 0
+        cartData.map((item) => {
+            cartTotal += item.totalPrice ? item.totalPrice : 0
+        })
+        dispatch(setCartTotal(cartTotal))
+    }, [cartData])
+
+    const handleCloseModal = () => {
+        dispatch(hideModal())
     }
 
+    const finalizePurchase = () => {
+        dispatch(addNotification('Thank you for your purchase'))
+        dispatch(clearCart())
+        dispatch(hideModal())
+    }
     const cartBody = (
-        cartData.map((i) => {
-            return (
-                <div key={i.id} className={styles.item}>
-                    <div className={styles.top}>
-                        <img className={styles.image} src={i.imageUrl} alt="" />
-                        <div>
-                            <div>
-                                <div className={styles.title}>
-                                    <BaseTypography value={i.title} />
-                                </div>
-                                <div >
-                                    <BaseCheckbox label={`${i.specs.antivirus.description} - ${i.specs.antivirus.price} ₴`} />
-                                    <BaseCheckbox label={`${i.specs.os.description} - ${i.specs.os.price} ₴`} />
-                                    <BaseCheckbox label={`${i.specs.screenCare.description} - ${i.specs.screenCare.price} ₴`} />
-                                    <BaseCheckbox label={`${i.specs.antivirus.description} - ${i.specs.antivirus.price} ₴`} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.bottom}>
-                        <div className={styles.quantityButtons}>
-                            <BaseButton onClick={() => handleDecreaseCartItem(i)} value={'-'} />
-                            <BaseTypography className={styles.quantity} value={`${i.quantity}`} />
-                            <BaseButton onClick={() => handleIncreaseCartItem(i)} value={'+'} />
-                        </div>
-                        <div className={styles.price}>
-                            <BaseTypography value={`${i.price} ₴`} />
-                        </div>
-                    </div>
-
-                </div>
-            )
+        cartData.map((item, index) => {
+            return <CartItem key={item.id} item={item} index={index} />
         })
     )
 
     const cartFooter = (
         <div className={styles.footer}>
-            <BaseButton value='Continue shopping' />
+            <BaseButton onClick={handleCloseModal} value='Continue shopping' />
             <div className={styles.total}>
                 <div>
-                    total: {'20000'}
+                    total: {cartTotalPrice}
                 </div>
-                <BaseButton value='Finalize purchase' />
+                <PDFDownloadLink document={<BasePdf />} fileName="FORM" > <BaseButton onClick={finalizePurchase} value='Finalize purchase' />  </PDFDownloadLink>
             </div>
-
         </div>
     )
+
+    const cartBodyEmpty = (
+        <div className={styles.emptyCartText}>
+            <BaseTypography value='no items' />
+        </div>
+    )
+
+    const cartFooterEmpty = (
+        <div className={styles.emptyCartButton}>
+            <BaseButton onClick={handleCloseModal} value='Continue shopping' />
+        </div>
+    )
+
     return <div>
         <div className={styles.root}>
-            {
-                cartData.length > 0 ? <BaseModal title='cart' body={cartBody} footer={cartFooter} /> : <BaseModal title='cart' body='NO ITEMS' />
-            }
+            {cartData.length > 0 ? <BaseModal title='cart' className={styles.modal} body={cartBody} footer={cartFooter} /> : <BaseModal className={styles.emptyCart} title='cart' body={cartBodyEmpty} footer={cartFooterEmpty} />}
         </div>
     </div>
 }

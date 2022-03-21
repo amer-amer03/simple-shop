@@ -4,8 +4,10 @@ import { logoutUser } from "../../store/actions/auth";
 import { openModal } from "../../store/actions/modal";
 import { addNotification } from "../../store/actions/notification";
 import { authIsLoginSelector, authUserSelector } from "../../store/selectors/auth";
+import { cartItemsQuantitySelector } from "../../store/selectors/cart";
 import BaseButton from "../BaseButton";
 import BaseLink from "../BaseLink";
+import BaseTypography from "../BaseTypography";
 import styles from './index.module.scss';
 
 interface Props extends IProps { }
@@ -14,6 +16,7 @@ const Header: React.FC<Props> = () => {
     const dispatch = useDispatch()
     const isLogin = useSelector(authIsLoginSelector);
     const userData = useSelector(authUserSelector);
+    const cartItemsQuantity = useSelector(cartItemsQuantitySelector);
 
     const openCartModal = () => {
         dispatch(openModal('cart'))
@@ -29,10 +32,9 @@ const Header: React.FC<Props> = () => {
 
     const logOut = () => {
         dispatch(logoutUser())
-        dispatch(addNotification('You are logged out'))
-
+        dispatch(addNotification('You have logged out'))
     }
-
+    console.log(cartItemsQuantity)
     return (
         <div className={styles.root}>
             <BaseLink to='/' >
@@ -55,8 +57,11 @@ const Header: React.FC<Props> = () => {
                         </div>
                     </div>
             }
-            <div className={styles.item}>
-                <img className={styles.icon} onClick={openCartModal} src="assets/images/shoppingCArt.png" alt="shopping cart" />
+            <div className={styles.item} onClick={openCartModal}>
+                <div className={styles.cartItemsQuantity}>
+                    <BaseTypography value={cartItemsQuantity} />
+                </div>
+                <img className={styles.icon} src="assets/images/shoppingCArt.png" alt="shopping cart" />
             </div>
 
         </div>

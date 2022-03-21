@@ -1,6 +1,5 @@
 import BaseLink from "../../components/BaseLink";
 import BaseTypography from "../../components/BaseTypography";
-import Header from "../../components/Header"
 import styles from './index.module.scss';
 
 const HomePage = () => {
