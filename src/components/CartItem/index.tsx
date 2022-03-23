@@ -36,7 +36,7 @@ const CartItem: React.FC<Props> = ({ item }) => {
             if (spec.checked) totalSpecsPrice += spec.price
         })
         dispatch(setTotalItemPrice(item, totalSpecsPrice))
-    }, [item, item.specs, item.quantity, dispatch])
+    }, [item.specs, item.quantity, dispatch])
 
     const handleRemoveItem = () => {
         dispatch(removeCartItem(item))
