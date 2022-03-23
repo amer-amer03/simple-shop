@@ -48,7 +48,7 @@ function cartReducer(state = initState, action: ICartAction): ICartState {
             };
         }
         case CartTypes.SET_TOTAL_PRICE: {
-            const updatedItems = setTotalPrice(state.cart, action.item, action.totalPrice);
+            const updatedItems = setTotalPrice(state.cart, action.itemId, action.totalPrice);
             return {
                 ...state,
                 cart: updatedItems,

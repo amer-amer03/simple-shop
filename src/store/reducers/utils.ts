@@ -61,11 +61,11 @@ export const toggleSpecs = (allCartItems: ICatalogDataResults[], currentCartItem
     return updatedItems;
 };
 
-export const setTotalPrice = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults, totalPrice: number) => {
+export const setTotalPrice = (allCartItems: ICatalogDataResults[], itemId: number, totalPrice: number) => {
     let updatedItems: ICatalogDataResults[] = [];
 
     updatedItems = allCartItems.map((cartItem) => {
-        return cartItem.id === currentCartItem.id
+        return cartItem.id === itemId
             ? { ...cartItem, totalPrice: totalPrice }
             : cartItem;
     });

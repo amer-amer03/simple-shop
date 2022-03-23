@@ -13,6 +13,7 @@ export enum CartTypes {
 
 export interface ICartAction extends Action {
     item: ICatalogDataResults;
+    itemId: number;
     selectedSpec: string;
     totalPrice: number;
     cartTotalPrice: number
@@ -38,8 +39,8 @@ export const toggleSpecs = (item: ICatalogDataResults, selectedSpec: string) => 
     return { type: CartTypes.TOGGLE_SPECS, item, selectedSpec };
 };
 
-export const setTotalItemPrice = (item: ICatalogDataResults, totalPrice: number) => {
-    return { type: CartTypes.SET_TOTAL_PRICE, item, totalPrice };
+export const setTotalItemPrice = (itemId: number, totalPrice: number) => {
+    return { type: CartTypes.SET_TOTAL_PRICE, itemId, totalPrice };
 };
 
 export const setCartTotal = (cartTotalPrice: number) => {
