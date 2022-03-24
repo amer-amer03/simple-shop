@@ -22,30 +22,46 @@ const Check: React.FC<Props> = () => {
   const checkBody = (
     <>
       <table className={styles.table}>
-        <tr className={styles.item}>
-          <th>Quantity</th>
-          <th>Description</th>
-          <th>Unit price</th>
-          <th>additional</th>
-          <th>Total price</th>
-        </tr>
-        {cartData.map((item) => {
-          return (
-            <tr>
-              <td>{item.quantity}</td>
-              <td>{item.title}</td>
-              <td>{item.price}</td>
-              <td>
-                <ul>
-                  {item.specs.map((spec) => {
-                    return spec.checked && <li>{spec.description}</li>;
-                  })}
-                </ul>
-              </td>
-              <td>{item.totalPrice}</td>
-            </tr>
-          );
-        })}
+        <tbody>
+          <tr className={styles.item}>
+            <th>
+              <BaseTypography value="Quantity" />
+            </th>
+            <th>
+              <BaseTypography value="Description" />
+            </th>
+            <th>
+              <BaseTypography value="Unit price" />
+            </th>
+            <th>
+              <BaseTypography value="Additional" />
+            </th>
+            <th>
+              <BaseTypography value="Total price" />
+            </th>
+          </tr>
+          {cartData.map((item) => {
+            return (
+              <tr key={item.id}>
+                <td>{item.quantity}</td>
+                <td>{item.title}</td>
+                <td>{item.price}</td>
+                <td>
+                  <ul>
+                    {item.specs.map((spec) => {
+                      return (
+                        spec.checked && (
+                          <li key={spec.title}>{spec.description}</li>
+                        )
+                      );
+                    })}
+                  </ul>
+                </td>
+                <td>{item.totalPrice}</td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
       <div className={styles.total}>
         <BaseTypography
@@ -68,7 +84,14 @@ const Check: React.FC<Props> = () => {
     </div>
   );
 
-  return <BaseModal title="Check" body={checkBody} footer={cartFooter} />;
+  return (
+    <BaseModal
+      title="Check"
+      onClose={handleCloseModal}
+      body={checkBody}
+      footer={cartFooter}
+    />
+  );
 };
 
 export default Check;

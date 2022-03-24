@@ -10,9 +10,10 @@ interface Props extends IProps {
   title?: ReactNode;
   body: ReactNode;
   footer?: ReactNode;
+  onClose?: () => void;
 }
 
-const BaseModal: FC<Props> = ({ title, body, footer, className }) => {
+const BaseModal: FC<Props> = ({ title, body, footer, className, onClose }) => {
   const dispatch = useDispatch();
 
   const handleHideModal = () => {
@@ -20,7 +21,10 @@ const BaseModal: FC<Props> = ({ title, body, footer, className }) => {
   };
   return (
     <div className={classNames(styles.root, className)}>
-      <div className={styles.button} onClick={handleHideModal}>
+      <div
+        className={styles.button}
+        onClick={onClose ? onClose : handleHideModal}
+      >
         <Close />
       </div>
       {title && <div className={styles.header}>{title}</div>}

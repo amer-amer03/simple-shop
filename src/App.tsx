@@ -13,7 +13,7 @@ const App: FC = () => {
 
   const ROUTES = {
     home: "/",
-    category: "/category",
+    catalog: "/catalog",
   };
 
   return (
@@ -21,7 +21,7 @@ const App: FC = () => {
       <Layout>
         <Routes>
           <Route path={ROUTES.home} element={<HomePage />} />
-          <Route path={ROUTES.category} element={<CatalogPage />} />
+          <Route path={ROUTES.catalog} element={<CatalogPage />} />
         </Routes>
         <Modal modalOpenType={openModalType} />
       </Layout>
