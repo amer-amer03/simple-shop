@@ -6,10 +6,10 @@ export enum ModalTypes {
 }
 
 export interface IModalAction extends Action {
-    modalType?: string;
+    modalType: string;
 }
 
-export const openModal: ActionCreator<Action> = (modalType: string) => {
+export const openModal: ActionCreator<IModalAction> = (modalType: string) => {
     return { type: ModalTypes.SHOW_MODAL, modalType }
 }
 

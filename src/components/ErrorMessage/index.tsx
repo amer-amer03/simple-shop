@@ -1,18 +1,17 @@
-import { IProps } from '../../interfaces/props';
-import BaseTypography from '../BaseTypography';
-import styles from './index.module.scss';
-
+import { IProps } from "../../interfaces/props";
+import BaseTypography from "../BaseTypography";
+import styles from "./index.module.scss";
 
 interface Props extends IProps {
-    value: string | undefined;
+  value: string | undefined;
 }
 
 const ErrorMessage: React.FC<Props> = ({ value }) => {
-    return (
-        <div className={styles.root}>
-            <BaseTypography className={styles.text} value={value} />
-        </div>
-    );
+  return (
+    <div className={styles.root}>
+      <BaseTypography className={styles.text} value={value} />
+    </div>
+  );
 };
 
 export default ErrorMessage;

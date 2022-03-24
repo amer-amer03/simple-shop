@@ -1,4 +1,4 @@
-import { Action } from "@reduxjs/toolkit";
+import { Action, ActionCreator } from "@reduxjs/toolkit";
 
 export enum NotificationTypes {
     ADD_NOTIFICATION = 'ADD_NOTIFICATION',
@@ -6,13 +6,13 @@ export enum NotificationTypes {
 }
 
 export interface INotificationAction extends Action {
-    message: 'message';
+    message: string;
 }
 
-export const addNotification = (message: string) => {
+export const addNotification: ActionCreator<INotificationAction> = (message: string) => {
     return { type: NotificationTypes.ADD_NOTIFICATION, message }
 }
 
-export const removeNotification = () => {
+export const removeNotification: ActionCreator<Action> = () => {
     return { type: NotificationTypes.ADD_NOTIFICATION }
 }

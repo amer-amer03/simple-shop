@@ -1,6 +1,6 @@
 import { Action, ActionCreator, Dispatch } from "redux";
 import { getCatalogData } from "../../api/catalog";
-import { ICatalogData, ICatalogDataResults } from "../../interfaces/catalog";
+import { ICatalogDataResults } from "../../interfaces/catalog";
 
 export enum CatalogDataTypes {
     LOADING_CATALOGDATA_REQUEST = 'LOADING_CATALOGDATA_REQUEST',
@@ -15,7 +15,7 @@ const loadingCatalogDataRequest: ActionCreator<Action> = () => {
     return { type: CatalogDataTypes.LOADING_CATALOGDATA_REQUEST }
 }
 
-const loadingCatalogDataSuccess: ActionCreator<Action> = (catalogData: ICatalogData) => {
+const loadingCatalogDataSuccess: ActionCreator<ICatalogAction> = (catalogData: ICatalogDataResults[]) => {
     return { type: CatalogDataTypes.LOADING_CATALOGDATA_SUCCESS, catalogData }
 }
 

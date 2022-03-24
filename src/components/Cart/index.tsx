@@ -1,77 +1,90 @@
-import { PDFDownloadLink } from '@react-pdf/renderer';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { IProps } from '../../interfaces/props';
-import { clearCart, setCartTotal } from '../../store/actions/cart';
-import { hideModal } from '../../store/actions/modal';
-import { addNotification } from '../../store/actions/notification';
-import { cartDataSelector, cartTotalPriceSelector } from '../../store/selectors/cart';
-import BaseButton from '../BaseButton';
-import BaseModal from '../BaseModal';
-import PurchaseFinalizePdf from '../PurchaseFinalizePdf';
-import BaseTypography from '../BaseTypography';
-import CartItem from '../CartItem';
-import styles from './index.module.scss';
-interface Props extends IProps {
-}
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { setCartTotal } from "../../store/actions/cart";
+import { IProps } from "../../interfaces/props";
+import { hideModal, openModal } from "../../store/actions/modal";
+import {
+  cartDataSelector,
+  cartTotalPriceSelector,
+} from "../../store/selectors/cart";
+import BaseButton from "../BaseButton";
+import BaseModal from "../BaseModal";
+import BaseTypography from "../BaseTypography";
+import CartItem from "../CartItem";
+import styles from "./index.module.scss";
+
+interface Props extends IProps {}
 
 const Cart: React.FC<Props> = () => {
-    const cartData = useSelector(cartDataSelector)
-    const cartTotalPrice = useSelector(cartTotalPriceSelector)
-    const dispatch = useDispatch()
+  const cartData = useSelector(cartDataSelector);
+  const cartTotalPrice = useSelector(cartTotalPriceSelector);
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        let cartTotal = 0
-        cartData.forEach((item) => {
-            cartTotal += item.totalPrice ? item.totalPrice : 0
-        })
-        dispatch(setCartTotal(cartTotal))
-    }, [cartData, dispatch])
+  useEffect(() => {
+    let cartTotal = 0;
+    const total = cartData.reduce(
+      (previousValue, item) =>
+        previousValue + (item.totalPrice ? item.totalPrice : 0),
+      cartTotal
+    );
+    dispatch(setCartTotal(total));
+  }, [cartData, dispatch]);
 
-    const handleCloseModal = () => {
-        dispatch(hideModal())
-    }
+  const handleCloseModal = () => {
+    dispatch(hideModal());
+  };
 
-    const finalizePurchase = () => {
-        dispatch(addNotification('Thank you for your purchase'))
-        dispatch(clearCart())
-        dispatch(hideModal())
-    }
-    const cartBody = (
-        cartData.map((item, index) => {
-            return <CartItem key={item.id} item={item} index={index} />
-        })
-    )
+  const finalizePurchase = () => {
+    dispatch(openModal("check"));
+  };
 
-    const cartFooter = (
-        <div className={styles.footer}>
-            <BaseButton onClick={handleCloseModal} value='Continue shopping' />
-            <div className={styles.total}>
-                <div>
-                    total: {cartTotalPrice}
-                </div>
-                <PDFDownloadLink document={<PurchaseFinalizePdf />} fileName="FORM" > <BaseButton onClick={finalizePurchase} value='Finalize purchase' />  </PDFDownloadLink>
-            </div>
-        </div>
-    )
+  const cartBody = cartData.map((item, index) => {
+    return <CartItem key={item.id} item={item} index={index} />;
+  });
 
-    const cartBodyEmpty = (
-        <div className={styles.emptyCartText}>
-            <BaseTypography value='no items' />
-        </div>
-    )
-
-    const cartFooterEmpty = (
-        <div className={styles.emptyCartButton}>
-            <BaseButton onClick={handleCloseModal} value='Continue shopping' />
-        </div>
-    )
-
-    return <div>
-        <div className={styles.root}>
-            {cartData.length > 0 ? <BaseModal title='cart' className={styles.modal} body={cartBody} footer={cartFooter} /> : <BaseModal className={styles.emptyCart} title='cart' body={cartBodyEmpty} footer={cartFooterEmpty} />}
-        </div>
+  const cartFooter = (
+    <div className={styles.footer}>
+      <BaseButton onClick={handleCloseModal} value="Continue shopping" />
+      <div className={styles.total}>
+        <div>total: {cartTotalPrice}</div>
+        <BaseButton onClick={finalizePurchase} value="Finalize purchase" />
+      </div>
     </div>
-}
+  );
 
-export default Cart
+  const cartBodyEmpty = (
+    <div className={styles.emptyCartText}>
+      <BaseTypography value="no items" />
+    </div>
+  );
+
+  const cartFooterEmpty = (
+    <div className={styles.emptyCartButton}>
+      <BaseButton onClick={handleCloseModal} value="Continue shopping" />
+    </div>
+  );
+
+  return (
+    <div>
+      <div className={styles.root}>
+        {cartData.length > 0 ? (
+          <BaseModal
+            title="cart"
+            className={styles.modal}
+            body={cartBody}
+            footer={cartFooter}
+          />
+        ) : (
+          <BaseModal
+            className={styles.emptyCart}
+            title="cart"
+            body={cartBodyEmpty}
+            footer={cartFooterEmpty}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Cart;

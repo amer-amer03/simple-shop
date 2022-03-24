@@ -1,22 +1,18 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import Catalog from "../../components/Catalog"
-import { loadingCatalogData } from "../../store/actions/catalog"
-import { catalogDataSelector } from "../../store/selectors/catalog"
+import { FC, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Catalog from "../../components/Catalog";
+import { loadingCatalogData } from "../../store/actions/catalog";
+import { catalogDataSelector } from "../../store/selectors/catalog";
 
-const CatalogPage = () => {
-    const dispatch = useDispatch()
-    const catalog = useSelector(catalogDataSelector);
+const CatalogPage: FC = () => {
+  const dispatch = useDispatch();
+  const catalog = useSelector(catalogDataSelector);
 
-    useEffect(() => {
-        dispatch(loadingCatalogData())
-    }, [dispatch])
+  useEffect(() => {
+    dispatch(loadingCatalogData());
+  }, [dispatch]);
 
-    return (
-        <>
-            <Catalog catalog={catalog} />
-        </>
-    )
-}
+  return <Catalog catalog={catalog} />;
+};
 
-export default CatalogPage
+export default CatalogPage;
