@@ -11,17 +11,18 @@ import "./App.css";
 const App: FC = () => {
   const openModalType = useSelector(modalSelector);
 
-  const homePagePath = "/";
-  const catalogPagePath = "/catalog";
+  const ROUTES = {
+    home: "/",
+    category: "/category",
+  };
 
   return (
     <div className="App">
       <Layout>
         <Routes>
-          <Route path={homePagePath} element={<HomePage />} />
-          <Route path={catalogPagePath} element={<CatalogPage />} />
+          <Route path={ROUTES.home} element={<HomePage />} />
+          <Route path={ROUTES.category} element={<CatalogPage />} />
         </Routes>
-
         <Modal modalOpenType={openModalType} />
       </Layout>
     </div>
