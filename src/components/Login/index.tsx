@@ -39,10 +39,13 @@ const Login = () => {
   });
 
   const onSubmit = (data: ILoginData) => {
+    console.log(userData);
     if (userData.email === data.email && userData.password === data.password) {
       dispatch(loginUser());
       dispatch(hideModal());
       dispatch(addNotification("You are logged in"));
+    } else {
+      dispatch(addNotification("Wrong email or password"));
     }
   };
 
