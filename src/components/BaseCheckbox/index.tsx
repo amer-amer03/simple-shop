@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { IProps } from "../../interfaces/props";
 import styles from "./index.module.scss";
 
@@ -7,9 +8,15 @@ interface Props extends IProps {
   checked: boolean;
 }
 
-const BaseCheckbox: React.FC<Props> = ({ value, label, checked, onChange }) => {
+const BaseCheckbox: React.FC<Props> = ({
+  value,
+  label,
+  checked,
+  className,
+  onChange,
+}) => {
   return (
-    <label className={styles.root}>
+    <label className={classNames(styles.root, className)}>
       <input
         type="checkbox"
         checked={checked}

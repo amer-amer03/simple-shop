@@ -9,9 +9,9 @@ import { IRegistrationData, IUserData } from "../../interfaces/auth";
 import { registerUser } from "../../store/actions/auth";
 import { hideModal } from "../../store/actions/modal";
 import { addNotification } from "../../store/actions/notification";
-import { IProps } from "../../interfaces/props";
 import BaseModal from "../BaseModal";
 import styles from "./index.module.scss";
+import BaseTypography from "../BaseTypography";
 
 const passwordValidationRegex =
   /^.*((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/;
@@ -37,9 +37,7 @@ const schema = yup
   })
   .required();
 
-interface Props extends IProps {}
-
-const Registration: React.FC<Props> = () => {
+const Registration: React.FC = () => {
   const dispatch = useDispatch();
 
   const defaultValues: IRegistrationData = {
@@ -156,8 +154,10 @@ const Registration: React.FC<Props> = () => {
       <div className={styles.tooltip}>
         Privacy policy
         <span className={styles.tooltiptext}>
-          By clicking submit you agree to our privacy policy and terms and
-          conditions
+          <BaseTypography
+            value="By clicking submit you agree to our privacy policy and terms and
+          conditions"
+          />
         </span>
       </div>
     </>

@@ -7,14 +7,11 @@ import {
   cartDataSelector,
   cartTotalPriceSelector,
 } from "../../store/selectors/cart";
-import BaseButton from "../BaseButton";
 import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
 
-interface Props extends IProps {}
-
-const Check: React.FC<Props> = () => {
+const Check: React.FC<IProps> = () => {
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();
@@ -66,7 +63,37 @@ const Check: React.FC<Props> = () => {
       <div className={styles.total}>
         <BaseTypography
           className={styles.total}
-          value={`Total price - ${cartTotalPrice}₴`}
+          value={`Total price - ${cartTotalPrice} ₴`}
+        />
+      </div>
+    </>
+  );
+
+  const checkSmallBody = (
+    <>
+      {cartData.map((item) => {
+        return (
+          <div className={styles.checkSmallItem}>
+            <div>
+              <BaseTypography
+                className={styles.checkSmallItemTitle}
+                value={`${item.quantity} x ${item.title} - ${item.totalPrice} ₴`}
+              />
+            </div>
+            <ul>
+              {item.specs.map((spec) => {
+                return (
+                  spec.checked && <li key={spec.title}>{spec.description}</li>
+                );
+              })}
+            </ul>
+          </div>
+        );
+      })}
+      <div className={styles.total}>
+        <BaseTypography
+          className={styles.total}
+          value={`Total price - ${cartTotalPrice} ₴`}
         />
       </div>
     </>
@@ -78,19 +105,21 @@ const Check: React.FC<Props> = () => {
     dispatch(clearCart());
   };
 
-  const cartFooter = (
-    <div className={styles.footer}>
-      <BaseButton onClick={handleCloseModal} value="Close window" />
-    </div>
-  );
-
   return (
-    <BaseModal
-      title="Check"
-      onClose={handleCloseModal}
-      body={checkBody}
-      footer={cartFooter}
-    />
+    <>
+      <BaseModal
+        title="Check"
+        className={styles.footerTable}
+        onClose={handleCloseModal}
+        body={checkBody}
+      />
+      <BaseModal
+        title="Check"
+        className={styles.footerList}
+        onClose={handleCloseModal}
+        body={checkSmallBody}
+      />
+    </>
   );
 };
 

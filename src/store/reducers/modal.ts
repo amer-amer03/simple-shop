@@ -11,7 +11,7 @@ export const initState: IModalState = {
 function modalReducer(state = initState, action: IModalAction): IModalState {
     switch (action.type) {
         case ModalTypes.SHOW_MODAL:
-            return { ...state, modalType: action.modalType ? action.modalType : '' }
+            return { ...state, modalType: action.payload }
         case ModalTypes.HIDE_MODAL:
             return { ...state, modalType: '' }
     }

@@ -36,7 +36,8 @@
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+
     .total {
         display: flex;
         align-items: center;
@@ -56,14 +57,31 @@
         text-transform: uppercase;
         font-size: 20px;
     }
+    .emptyCartButton {
+        text-align: right;
+    }
 }
 .modal {
     width: 80vw;
     max-width: 920px;
 }
 
+@include xxs-max {
+    .footer {
+        justify-content: center;
+        .total {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            :first-child {
+                margin-right: 0;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
 @include lg-max {
     .modal {
-        width: 90vw;
+        width: 95vw;
     }
 }

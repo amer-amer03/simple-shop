@@ -1,5 +1,7 @@
+@import "../../styles/mixin";
 .root {
     width: 500px;
+    overflow-x: hidden;
 }
 
 .tooltip {
@@ -21,13 +23,11 @@
     text-align: center;
     padding: 5px 10px;
     border-radius: 6px;
-
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: 50%;
     margin-left: -60px;
-
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -39,4 +39,21 @@
 
 .button {
     margin-top: 10px;
+}
+
+@include xs-max {
+    .root {
+        width: 90vw;
+    }
+    .tooltip .tooltiptext {
+        width: 300px;
+    }
+}
+@include xxs-max {
+    .root {
+        width: 100vw;
+    }
+    .tooltip .tooltiptext {
+        width: 300px;
+    }
 }

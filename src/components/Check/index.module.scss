@@ -1,18 +1,46 @@
+@import "../../styles/variables";
+
+@import "../../styles/mixin";
 .table {
-    margin: 10px 30px 20px 10px;
     td,
     th {
-        border: 1px solid #dddddd;
+        border: 1px solid $primary-color;
         text-align: left;
         padding: 8px;
     }
+    ul {
+        padding-inline-start: 20px;
+    }
+}
+.footerTable {
+    display: block;
+}
+.footerList {
+    display: none;
 }
 
 .total {
     text-align: right;
     font-size: 26px;
-    margin: 10px 30px 20px 10px;
-    padding: 10px;
-    border-top: 2px solid #dddddd;
-    border-bottom: 2px solid #dddddd;
+    padding: 10px 0px;
+    border-bottom: 2px solid $primary-color;
+}
+
+@include xs-max {
+    .checkSmallItem {
+        padding-top: 10px;
+        border-bottom: 1px solid $primary-color;
+    }
+    .checkSmallItemTitle {
+        font-weight: 600;
+    }
+    .total {
+        border: none;
+    }
+    .footerTable {
+        display: none;
+    }
+    .footerList {
+        display: block;
+    }
 }

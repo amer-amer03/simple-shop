@@ -1,4 +1,4 @@
-import { Action } from "@reduxjs/toolkit";
+import { Action, ActionCreator } from "@reduxjs/toolkit";
 import { IUserData } from "../../interfaces/auth";
 
 export enum AuthTypes {
@@ -8,14 +8,14 @@ export enum AuthTypes {
 }
 
 export interface IAuthAction extends Action {
-    userData?: IUserData;
+    payload: IUserData;
 }
-export const registerUser = (userData: IUserData): IAuthAction => {
-    return { type: AuthTypes.REGISTRATION, userData }
+export const registerUser: ActionCreator<IAuthAction> = (userData: IUserData) => {
+    return { type: AuthTypes.REGISTRATION, payload: userData }
 }
-export const loginUser = (): IAuthAction => {
+export const loginUser: ActionCreator<Action> = () => {
     return { type: AuthTypes.LOGIN }
 }
-export const logoutUser = (): IAuthAction => {
+export const logoutUser: ActionCreator<Action> = () => {
     return { type: AuthTypes.LOGOUT }
 }

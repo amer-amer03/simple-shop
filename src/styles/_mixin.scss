@@ -1,3 +1,6 @@
+// > 360
+$screen-xxs-max: 360px;
+
 // 360- 767
 $screen-xs-max: 767px;
 
@@ -10,6 +13,12 @@ $screen-lg-max: 1439px;
 // 1440 - 1919
 $screen-xl-max: 1919px;
 
+// < 360
+@mixin xxs-max {
+    @media (max-width: #{$screen-xxs-max}) {
+        @content;
+    }
+}
 // < 767
 @mixin xs-max {
     @media (max-width: #{$screen-xs-max}) {

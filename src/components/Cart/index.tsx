@@ -13,9 +13,7 @@ import BaseTypography from "../BaseTypography";
 import CartItem from "../CartItem";
 import styles from "./index.module.scss";
 
-interface Props extends IProps {}
-
-const Cart: React.FC<Props> = () => {
+const Cart: React.FC<IProps> = () => {
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();
@@ -44,9 +42,9 @@ const Cart: React.FC<Props> = () => {
 
   const cartFooter = (
     <div className={styles.footer}>
-      <BaseButton onClick={handleCloseModal} value="Continue shopping" />
       <div className={styles.total}>
-        <div>total: {cartTotalPrice}</div>
+        <BaseTypography value={`Total: ${cartTotalPrice} ₴`} />
+        <div></div>
         <BaseButton onClick={finalizePurchase} value="Finalize purchase" />
       </div>
     </div>
@@ -67,14 +65,16 @@ const Cart: React.FC<Props> = () => {
   return (
     <div>
       <div className={styles.root}>
-        {cartData.length > 0 ? (
+        {cartData.length > 0 && (
           <BaseModal
             title="cart"
             className={styles.modal}
             body={cartBody}
             footer={cartFooter}
           />
-        ) : (
+        )}
+
+        {cartData.length === 0 && (
           <BaseModal
             className={styles.emptyCart}
             title="cart"

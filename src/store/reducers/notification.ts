@@ -11,7 +11,7 @@ export const initState: INotificationState = {
 function notificationReducer(state = initState, action: INotificationAction): INotificationState {
     switch (action.type) {
         case NotificationTypes.ADD_NOTIFICATION:
-            return { ...state, message: action.message ? action.message : '' }
+            return { ...state, message: action.payload }
         case NotificationTypes.REMOVE_NOTIFICATION:
             return { ...state, message: '' }
     }return state

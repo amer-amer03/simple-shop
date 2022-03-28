@@ -7,14 +7,10 @@ import HomePage from "./pages/HomePage";
 import { modalSelector } from "./store/selectors/modal";
 import Layout from "./components/Layout";
 import "./App.css";
+import { ROUTES } from "./utils/constants/urls";
 
 const App: FC = () => {
   const openModalType = useSelector(modalSelector);
-
-  const ROUTES = {
-    home: "/",
-    catalog: "/catalog",
-  };
 
   return (
     <div className="App">

@@ -1,3 +1,6 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
 .root {
     display: flex;
     justify-content: flex-end;
@@ -27,11 +30,20 @@
         width: 15px;
         height: 15px;
         padding: 2px;
-        background: #dddddd;
+        background: $primary-color;
         text-align: center;
         font-size: 12px;
     }
 }
 .button {
     margin-left: 15px;
+}
+
+@include xxs-max {
+    .root {
+        padding: 5px;
+    }
+    .item {
+        margin: 0px 5px;
+    }
 }

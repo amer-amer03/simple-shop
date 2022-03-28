@@ -1,6 +1,21 @@
+@import "../../styles/mixin";
 .root {
     width: 450px;
 }
 .button {
     margin-top: 10px;
+}
+
+@include xs-max {
+    .root {
+        width: 90vw;
+    }
+}
+@include xxs-max {
+    .root {
+        width: 100vw;
+    }
+    .tooltip .tooltiptext {
+        width: 300px;
+    }
 }

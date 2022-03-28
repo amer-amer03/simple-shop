@@ -6,11 +6,11 @@ export enum NotificationTypes {
 }
 
 export interface INotificationAction extends Action {
-    message: string;
+    payload: string;
 }
 
-export const addNotification: ActionCreator<INotificationAction> = (message: string) => {
-    return { type: NotificationTypes.ADD_NOTIFICATION, message }
+export const addNotification: ActionCreator<INotificationAction> = (message: string): INotificationAction => {
+    return { type: NotificationTypes.ADD_NOTIFICATION, payload: message }
 }
 
 export const removeNotification: ActionCreator<Action> = () => {

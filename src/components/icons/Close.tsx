@@ -1,7 +1,4 @@
-import { IProps } from "../../interfaces/props";
-
-interface Props extends IProps {}
-const Close: React.FC<Props> = () => {
+const Close: React.FC = () => {
   return (
     <svg
       fill="#000000"

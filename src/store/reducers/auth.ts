@@ -27,10 +27,9 @@ function authReducer(state = initState, action: IAuthAction): IAuthState {
                 isLogin: true,
                 userData: {
                     ...state.userData,
-                    ...action.userData
+                    ...action.payload
                 }
             }
-
         case AuthTypes.LOGIN:
             return {
                 ...state,

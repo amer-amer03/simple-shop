@@ -54,8 +54,8 @@ const CartItem: React.FC<Props> = ({ item }) => {
         <div className={styles.removeItemButton} onClick={handleRemoveItem}>
           <Close />
         </div>
-        <div>
-          <img className={styles.image} src={item.imageUrl} alt="" />
+        <div className={styles.imageBox}>
+          <img className={styles.image} src={item.imageUrl} alt={item.title} />
         </div>
         <div>
           <div className={styles.title}>
@@ -66,6 +66,7 @@ const CartItem: React.FC<Props> = ({ item }) => {
               return (
                 <BaseCheckbox
                   key={spec.title}
+                  className={styles.checkBox}
                   checked={
                     spec.checked && spec.checked !== undefined
                       ? spec.checked
@@ -73,7 +74,7 @@ const CartItem: React.FC<Props> = ({ item }) => {
                   }
                   onChange={() => handletoggleSpecs(item, spec.title)}
                   value={`${item.quantity}`}
-                  label={`${spec.title}- ${spec.description} -  ₴${spec.price}`}
+                  label={`${spec.description} - ${spec.price} ₴`}
                 />
               );
             })}
@@ -96,7 +97,7 @@ const CartItem: React.FC<Props> = ({ item }) => {
           />
         </div>
         <div className={styles.price}>
-          <BaseTypography value={item.totalPrice} />
+          <BaseTypography value={`${item.totalPrice} ₴`} />
         </div>
       </div>
     </div>

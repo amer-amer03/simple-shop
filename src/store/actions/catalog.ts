@@ -8,15 +8,15 @@ export enum CatalogDataTypes {
     LOADING_CATALOGDATA_ERROR = 'LOADING_CATALOGDATA_ERROR',
 }
 export interface ICatalogAction extends Action {
-    catalogData: ICatalogDataResults[];
+    payload: ICatalogDataResults[];
 }
 
 const loadingCatalogDataRequest: ActionCreator<Action> = () => {
     return { type: CatalogDataTypes.LOADING_CATALOGDATA_REQUEST }
 }
 
-const loadingCatalogDataSuccess: ActionCreator<ICatalogAction> = (catalogData: ICatalogDataResults[]) => {
-    return { type: CatalogDataTypes.LOADING_CATALOGDATA_SUCCESS, catalogData }
+const loadingCatalogDataSuccess: ActionCreator<ICatalogAction> = (catalogData: ICatalogDataResults[]): ICatalogAction => {
+    return { type: CatalogDataTypes.LOADING_CATALOGDATA_SUCCESS, payload: catalogData }
 }
 
 export const loadingCatalogData = () => {

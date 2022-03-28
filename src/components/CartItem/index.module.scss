@@ -9,7 +9,6 @@
 }
 .top {
     display: flex;
-    justify-content: space-around;
     position: relative;
     .removeItemButton {
         position: absolute;
@@ -21,8 +20,14 @@
         font-size: 18px;
         padding-bottom: 10px;
     }
+    .imageBox {
+        width: 25%;
+    }
     .image {
         width: 150px;
+    }
+    .checkBox {
+        padding-bottom: 5px;
     }
 }
 .bottom {
@@ -55,11 +60,29 @@
 }
 
 @include sm-max {
-    .item {
+    .topХ .item {
         display: flex;
         flex-direction: column;
     }
     .image {
         margin-right: 20px;
+    }
+}
+
+@include xs-max {
+    .imageBox {
+        align-self: center;
+    }
+    .top {
+        flex-direction: column;
+        .title {
+            margin-top: 15px;
+        }
+        .imageBox {
+            width: auto;
+        }
+    }
+    .item {
+        margin: 10px 20px 10px 0px;
     }
 }

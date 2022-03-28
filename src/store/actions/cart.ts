@@ -12,37 +12,44 @@ export enum CartTypes {
 }
 
 export interface ICartAction extends Action {
-    item?: ICatalogDataResults;
-    itemId?: number;
-    selectedSpec?: string;
-    totalPrice?: number;
-    cartTotalPrice?: number
+    payload: ICatalogDataResults;
 }
 
-export const increaseCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults) => {
-    return { type: CartTypes.INCREASE_CART_ITEM, item };
+export interface ISpecsAction extends Action {
+    payload: { item: ICatalogDataResults, selectedSpec: string };
+}
+export interface ICartItemAction extends Action {
+    payload: { itemId: number, totalPrice: number }
+}
+export interface ICartTotalAction extends Action {
+    payload: number;
+
+}
+
+export const increaseCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults): ICartAction => {
+    return { type: CartTypes.INCREASE_CART_ITEM, payload: item };
 };
 
 export const decreaseCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults) => {
-    return { type: CartTypes.DECREASE_CART_ITEM, item };
+    return { type: CartTypes.DECREASE_CART_ITEM, payload: item };
 };
 
 export const removeCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults) => {
-    return { type: CartTypes.REMOVE_CART_ITEM, item };
+    return { type: CartTypes.REMOVE_CART_ITEM, payload: item };
 };
 
-export const clearCart: ActionCreator<ICartAction> = () => {
+export const clearCart: ActionCreator<Action> = (): Action => {
     return { type: CartTypes.CLEAR_CART };
 };
 
-export const toggleSpecs: ActionCreator<ICartAction> = (item: ICatalogDataResults, selectedSpec: string) => {
-    return { type: CartTypes.TOGGLE_SPECS, item, selectedSpec };
+export const toggleSpecs: ActionCreator<ISpecsAction> = (item: ICatalogDataResults, selectedSpec: string): ISpecsAction => {
+    return { type: CartTypes.TOGGLE_SPECS, payload: { item, selectedSpec } };
 };
 
-export const setTotalItemPrice: ActionCreator<ICartAction> = (itemId: number, totalPrice: number) => {
-    return { type: CartTypes.SET_TOTAL_PRICE, itemId, totalPrice };
+export const setTotalItemPrice: ActionCreator<ICartItemAction> = (itemId: number, totalPrice: number): ICartItemAction => {
+    return { type: CartTypes.SET_TOTAL_PRICE, payload: { itemId, totalPrice } };
 };
 
-export const setCartTotal: ActionCreator<ICartAction> = (cartTotalPrice: number) => {
-    return { type: CartTypes.SET_CART_TOTAL_PRICE, cartTotalPrice };
+export const setCartTotal: ActionCreator<ICartTotalAction> = (cartTotalPrice: number): ICartTotalAction => {
+    return { type: CartTypes.SET_CART_TOTAL_PRICE, payload: cartTotalPrice };
 };

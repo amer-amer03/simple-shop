@@ -22,7 +22,7 @@ function catalogReducer(state = initState, action: ICatalogAction): ICatalogStat
                 isLoading: false,
                 catalogData: {
                     ...state.catalogData.results,
-                    results: action.catalogData ? action.catalogData : []
+                    results: action.payload
                 },
             };
     }

@@ -39,7 +39,6 @@ const Login = () => {
   });
 
   const onSubmit = (data: ILoginData) => {
-    console.log(userData);
     if (userData.email === data.email && userData.password === data.password) {
       dispatch(loginUser());
       dispatch(hideModal());

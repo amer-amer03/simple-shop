@@ -8,38 +8,38 @@ import {
   authUserSelector,
 } from "../../store/selectors/auth";
 import { cartItemsQuantitySelector } from "../../store/selectors/cart";
+import { ROUTES } from "../../utils/constants/urls";
 import BaseButton from "../BaseButton";
 import BaseLink from "../BaseLink";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
 
-interface Props extends IProps {}
-
-const Header: React.FC<Props> = () => {
+const Header: React.FC<IProps> = () => {
   const dispatch = useDispatch();
   const isLogin = useSelector(authIsLoginSelector);
   const userData = useSelector(authUserSelector);
   const cartItemsQuantity = useSelector(cartItemsQuantitySelector);
 
   const openCartModal = () => {
-    dispatch(openModal("cart"));
+    return dispatch(openModal("cart"));
   };
 
   const openRegistrationModal = () => {
-    dispatch(openModal("registration"));
+    return dispatch(openModal("registration"));
   };
 
   const openLoginModal = () => {
-    dispatch(openModal("login"));
+    return dispatch(openModal("login"));
   };
 
   const logOut = () => {
     dispatch(logoutUser());
     dispatch(addNotification("You have logged out"));
   };
+
   return (
     <div className={styles.root}>
-      <BaseLink to="/">SIMPLE SHOP</BaseLink>
+      <BaseLink to={ROUTES.home}>SIMPLE SHOP</BaseLink>
       {isLogin ? (
         <div className={styles.item}>
           <BaseButton onClick={logOut} value={`${userData.name}: logout`} />
