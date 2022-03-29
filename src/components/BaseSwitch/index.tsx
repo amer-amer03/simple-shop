@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { IProps } from "../../interfaces/props";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
@@ -8,11 +9,7 @@ interface Props extends IProps {
   label: string;
 }
 
-const BaseSwitch: React.FC<Props> = ({
-  checked,
-  label,
-  onChange,
-}): JSX.Element => {
+const BaseSwitch: FC<Props> = ({ checked, label, onChange }): JSX.Element => {
   return (
     <>
       <BaseTypography value={label} />

@@ -1,13 +1,14 @@
 import classNames from "classnames";
+import { FC, MouseEvent } from "react";
 import { IProps } from "../../interfaces/props";
 import styles from "./index.module.scss";
 
 interface Props extends IProps {
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  onClick?: (e: MouseEvent<HTMLElement>) => void;
   type?: "submit" | "button";
 }
 
-const BaseButton: React.FC<Props> = ({
+const BaseButton: FC<Props> = ({
   value,
   className,
   type = "submit",

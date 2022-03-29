@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { ChangeEvent } from "react";
+import { ChangeEvent, FC } from "react";
 import { IProps } from "../../interfaces/props";
 import styles from "./index.module.scss";
 
@@ -10,7 +10,7 @@ interface Props extends IProps {
   type?: string;
 }
 
-const BaseInput: React.FC<Props> = ({
+const BaseInput: FC<Props> = ({
   placeholder,
   className,
   type = "text",

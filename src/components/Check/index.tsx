@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IProps } from "../../interfaces/props";
 import { clearCart } from "../../store/actions/cart";
@@ -11,7 +12,7 @@ import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
 
-const Check: React.FC<IProps> = (): JSX.Element => {
+const Check: FC<IProps> = (): JSX.Element => {
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();

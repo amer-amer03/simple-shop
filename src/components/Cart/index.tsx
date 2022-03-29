@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { setCartTotal } from "../../store/actions/cart";
+import { Action } from "@reduxjs/toolkit";
 import { IProps } from "../../interfaces/props";
 import { hideModal, openModal } from "../../store/actions/modal";
 import {
@@ -12,9 +13,8 @@ import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
 import CartItem from "../CartItem";
 import styles from "./index.module.scss";
-import { Action } from "@reduxjs/toolkit";
 
-const Cart: React.FC<IProps> = (): JSX.Element => {
+const Cart: FC<IProps> = (): JSX.Element => {
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();

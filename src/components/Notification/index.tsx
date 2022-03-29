@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeNotification } from "../../store/actions/notification";
 import { notificationSelector } from "../../store/selectors/notification";
@@ -6,7 +6,7 @@ import BaseTypography from "../BaseTypography";
 import Close from "../icons/Close";
 import styles from "./index.module.scss";
 
-const Notification: React.FC = (): JSX.Element | null => {
+const Notification: FC = (): JSX.Element | null => {
   const dispatch = useDispatch();
   const notificationType = useSelector(notificationSelector);
 

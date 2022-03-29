@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { FC, FormEvent, useCallback, useEffect, useState } from "react";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IOption } from "../../interfaces/options";
 import { IProps } from "../../interfaces/props";
@@ -34,7 +34,7 @@ const sortByOptions: IOption[] = [
   },
 ];
 
-const Catalog: React.FC<Props> = ({ catalog }): JSX.Element => {
+const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
   const [itemsToShow, setItemsToShow] = useState<ICatalogDataResults[]>([]);
   const [next, setNext] = useState<number>(20);
   const [sortOrder, setSortOrder] = useState<string>("priceAsc");
@@ -82,7 +82,7 @@ const Catalog: React.FC<Props> = ({ catalog }): JSX.Element => {
     setNext(next + itemsPerPage);
   };
 
-  const handleChange = (e: React.FormEvent<HTMLSelectElement>) => {
+  const handleChange = (e: FormEvent<HTMLSelectElement>) => {
     let value = e.currentTarget.value;
     setSortOrder(value);
   };

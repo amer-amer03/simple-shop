@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IProps } from "../../interfaces/props";
 import { logoutUser } from "../../store/actions/auth";
@@ -14,7 +15,7 @@ import BaseLink from "../BaseLink";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
 
-const Header: React.FC<IProps> = (): JSX.Element => {
+const Header: FC<IProps> = (): JSX.Element => {
   const dispatch = useDispatch();
   const isLogin = useSelector(authIsLoginSelector);
   const userData = useSelector(authUserSelector);

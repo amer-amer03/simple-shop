@@ -1,5 +1,6 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { FC } from "react";
 import { Controller, useForm } from "react-hook-form";
 import LabelInput from "../LabelInput";
 import ErrorMessage from "../ErrorMessage";
@@ -20,7 +21,7 @@ const schema = yup
   })
   .required();
 
-const Login: React.FC = (): JSX.Element => {
+const Login: FC = (): JSX.Element => {
   const dispatch = useDispatch();
   const userData = useSelector(authUserSelector);
 

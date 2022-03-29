@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, FC } from "react";
 import { IProps } from "../../interfaces/props";
 import BaseInput from "../BaseInput";
 import BaseTypography from "../BaseTypography";
@@ -12,11 +12,7 @@ interface Props extends IProps {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const LabelInput: React.FC<Props> = ({
-  className,
-  label,
-  ...props
-}): JSX.Element => {
+const LabelInput: FC<Props> = ({ className, label, ...props }): JSX.Element => {
   return (
     <div className={styles.root}>
       <BaseTypography className={styles.label} value={label} />

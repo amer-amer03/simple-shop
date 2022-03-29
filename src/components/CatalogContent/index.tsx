@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { FC } from "react";
 import { useDispatch } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
@@ -13,10 +14,7 @@ interface Props extends IProps {
   checkedSwitch: boolean;
 }
 
-const CatalogContent: React.FC<Props> = ({
-  item,
-  checkedSwitch,
-}): JSX.Element => {
+const CatalogContent: FC<Props> = ({ item, checkedSwitch }): JSX.Element => {
   const dispatch = useDispatch();
 
   const handleAddCartItem = (i: ICatalogDataResults) => {

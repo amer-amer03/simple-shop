@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { FC } from "react";
 import { IProps } from "../../interfaces/props";
 import styles from "./index.module.scss";
 
@@ -8,7 +9,7 @@ interface Props extends IProps {
   checked: boolean;
 }
 
-const BaseCheckbox: React.FC<Props> = ({
+const BaseCheckbox: FC<Props> = ({
   value,
   label,
   checked,

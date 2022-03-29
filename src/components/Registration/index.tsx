@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { FC } from "react";
 import LabelInput from "../LabelInput";
 import ErrorMessage from "../ErrorMessage";
 import BaseButton from "../BaseButton";
@@ -10,8 +11,8 @@ import { registerUser } from "../../store/actions/auth";
 import { hideModal } from "../../store/actions/modal";
 import { addNotification } from "../../store/actions/notification";
 import BaseModal from "../BaseModal";
-import styles from "./index.module.scss";
 import BaseTypography from "../BaseTypography";
+import styles from "./index.module.scss";
 
 const passwordValidationRegex =
   /^.*((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/;
@@ -37,7 +38,7 @@ const schema = yup
   })
   .required();
 
-const Registration: React.FC = (): JSX.Element => {
+const Registration: FC = (): JSX.Element => {
   const dispatch = useDispatch();
 
   const defaultValues: IRegistrationData = {

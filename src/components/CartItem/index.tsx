@@ -1,5 +1,5 @@
 import { Action } from "@reduxjs/toolkit";
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
@@ -21,7 +21,7 @@ interface Props extends IProps {
   index: number;
 }
 
-const CartItem: React.FC<Props> = ({ item }): JSX.Element => {
+const CartItem: FC<Props> = ({ item }): JSX.Element => {
   const dispatch = useDispatch();
 
   const handleIncreaseCartItem = (i: ICatalogDataResults): Action => {

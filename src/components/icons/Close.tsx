@@ -1,4 +1,6 @@
-const Close: React.FC = () => {
+import { FC } from "react";
+
+const Close: FC = (): JSX.Element => {
   return (
     <svg
       fill="#000000"
