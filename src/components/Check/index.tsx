@@ -10,7 +10,16 @@ import {
 } from "../../store/selectors/cart";
 import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
+import CheckTable from "../CheckTable";
 import styles from "./index.module.scss";
+
+const tableHeaders = [
+  "Quantity",
+  "Description",
+  "Unit price",
+  "Additional",
+  "Total price",
+];
 
 const Check: FC<IProps> = (): JSX.Element => {
   const cartData = useSelector(cartDataSelector);
@@ -19,48 +28,7 @@ const Check: FC<IProps> = (): JSX.Element => {
 
   const checkBody = (
     <>
-      <table className={styles.table}>
-        <tbody>
-          <tr className={styles.item}>
-            <th>
-              <BaseTypography value="Quantity" />
-            </th>
-            <th>
-              <BaseTypography value="Description" />
-            </th>
-            <th>
-              <BaseTypography value="Unit price" />
-            </th>
-            <th>
-              <BaseTypography value="Additional" />
-            </th>
-            <th>
-              <BaseTypography value="Total price" />
-            </th>
-          </tr>
-          {cartData.map((item) => {
-            return (
-              <tr key={item.id}>
-                <td>{item.quantity}</td>
-                <td>{item.title}</td>
-                <td>{item.price}</td>
-                <td>
-                  <ul>
-                    {item.specs.map((spec) => {
-                      return (
-                        spec.checked && (
-                          <li key={spec.title}>{spec.description}</li>
-                        )
-                      );
-                    })}
-                  </ul>
-                </td>
-                <td>{item.totalPrice}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <CheckTable cartData={cartData} />
       <div className={styles.total}>
         <BaseTypography
           className={styles.total}
@@ -74,7 +42,7 @@ const Check: FC<IProps> = (): JSX.Element => {
     <>
       {cartData.map((item) => {
         return (
-          <div className={styles.checkSmallItem}>
+          <div key={item.id} className={styles.checkSmallItem}>
             <div>
               <BaseTypography
                 className={styles.checkSmallItemTitle}

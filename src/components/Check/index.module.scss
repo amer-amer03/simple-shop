@@ -1,17 +1,6 @@
 @import "../../styles/variables";
-
 @import "../../styles/mixin";
-.table {
-    td,
-    th {
-        border: 1px solid $primary-color;
-        text-align: left;
-        padding: 8px;
-    }
-    ul {
-        padding-inline-start: 20px;
-    }
-}
+
 .footerTable {
     display: block;
 }

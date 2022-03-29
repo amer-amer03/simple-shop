@@ -41,11 +41,14 @@ const Header: FC<IProps> = (): JSX.Element => {
   return (
     <div className={styles.root}>
       <BaseLink to={ROUTES.home}>SIMPLE SHOP</BaseLink>
-      {isLogin ? (
+
+      {isLogin && (
         <div className={styles.item}>
           <BaseButton onClick={logOut} value={`${userData.name}: logout`} />
         </div>
-      ) : (
+      )}
+
+      {!isLogin && (
         <div className={styles.item}>
           <div className={styles.button}>
             <BaseButton onClick={openRegistrationModal} value="Sign in" />
@@ -55,6 +58,7 @@ const Header: FC<IProps> = (): JSX.Element => {
           </div>
         </div>
       )}
+
       <div className={styles.item} onClick={openCartModal}>
         <div className={styles.cartItemsQuantity}>
           <BaseTypography value={cartItemsQuantity} />

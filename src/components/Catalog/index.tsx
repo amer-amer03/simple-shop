@@ -12,7 +12,6 @@ interface Props extends IProps {
   catalog: ICatalogDataResults[];
 }
 
-const itemsPerPage = 10;
 let catalogArray: ICatalogDataResults[] = [];
 
 const sortByOptions: IOption[] = [
@@ -33,16 +32,16 @@ const sortByOptions: IOption[] = [
     label: "Review: high to low",
   },
 ];
+const itemsPerPage = 20;
 
 const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
   const [itemsToShow, setItemsToShow] = useState<ICatalogDataResults[]>([]);
-  const [next, setNext] = useState<number>(20);
+  const [next, setNext] = useState<number>(itemsPerPage);
   const [sortOrder, setSortOrder] = useState<string>("priceAsc");
   const [orderedCatalog, setOrderedCatalog] = useState<ICatalogDataResults[]>(
     []
   );
   const [checkedSwitch, setCheckedSwitch] = useState<boolean>(false);
-
   const loopWithSlice = useCallback(
     (start: number, end: number) => {
       const slicedCatalog = orderedCatalog.slice(start, end);
@@ -95,7 +94,6 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
       <CatalogContent key={item.id} item={item} checkedSwitch={checkedSwitch} />
     );
   });
-
   return (
     <div className={styles.root}>
       <div className={styles.switches}>
@@ -110,12 +108,14 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
       </div>
       <div className={styles.catalog}>{catalogContent}</div>
 
-      <BaseButton
-        className={styles.loadMoreButton}
-        onClick={handleShowMorePosts}
-        type="button"
-        value="Load more"
-      />
+      {itemsToShow.length + itemsPerPage <= catalog.length && (
+        <BaseButton
+          className={styles.loadMoreButton}
+          onClick={handleShowMorePosts}
+          type="button"
+          value="Load more"
+        />
+      )}
     </div>
   );
 };

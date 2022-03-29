@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.table {
+    td,
+    th {
+        border: 1px solid $primary-color;
+        text-align: left;
+        padding: 8px;
+    }
+    ul {
+        padding-inline-start: 20px;
+    }
+}

@@ -71,11 +71,7 @@ const CartItem: FC<Props> = ({ item }): JSX.Element => {
                 <BaseCheckbox
                   key={spec.title}
                   className={styles.checkBox}
-                  checked={
-                    spec.checked && spec.checked !== undefined
-                      ? spec.checked
-                      : false
-                  }
+                  checked={!!spec.checked}
                   onChange={() => handletoggleSpecs(item, spec.title)}
                   value={`${item.quantity}`}
                   label={`${spec.description} - ${spec.price} ₴`}
