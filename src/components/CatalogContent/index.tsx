@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
@@ -15,6 +16,7 @@ interface Props extends IProps {
 }
 
 const CatalogContent: FC<Props> = ({ item, checkedSwitch }): JSX.Element => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const handleAddCartItem = (i: ICatalogDataResults) => {
@@ -72,7 +74,7 @@ const CatalogContent: FC<Props> = ({ item, checkedSwitch }): JSX.Element => {
         className={styles.button}
         onClick={() => handleAddCartItem(item)}
         type="button"
-        value="Add to cart"
+        value={t<string>("catalog.addToCart")}
       />
     </div>
   );

@@ -13,8 +13,10 @@ import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
 import CartItem from "../CartItem";
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Cart: FC<IProps> = (): JSX.Element => {
+  const { t } = useTranslation();
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();
@@ -44,22 +46,30 @@ const Cart: FC<IProps> = (): JSX.Element => {
   const cartFooter = (
     <div className={styles.footer}>
       <div className={styles.total}>
-        <BaseTypography value={`Total: ${cartTotalPrice} ₴`} />
+        <BaseTypography
+          value={`${t<string>("cart.total")}: ${cartTotalPrice} ₴`}
+        />
         <div></div>
-        <BaseButton onClick={finalizePurchase} value="Finalize purchase" />
+        <BaseButton
+          onClick={finalizePurchase}
+          value={t<string>("cart.finalizePurchase")}
+        />
       </div>
     </div>
   );
 
   const cartBodyEmpty = (
     <div className={styles.emptyCartText}>
-      <BaseTypography value="no items" />
+      <BaseTypography value={t<string>("cart.noItems")} />
     </div>
   );
 
   const cartFooterEmpty = (
     <div className={styles.emptyCartButton}>
-      <BaseButton onClick={handleCloseModal} value="Continue shopping" />
+      <BaseButton
+        onClick={handleCloseModal}
+        value={t<string>("cart.continueShopping")}
+      />
     </div>
   );
 
@@ -68,7 +78,7 @@ const Cart: FC<IProps> = (): JSX.Element => {
       <div className={styles.root}>
         {cartData.length > 0 && (
           <BaseModal
-            title="cart"
+            title={t<string>("cart.cart")}
             className={styles.modal}
             body={cartBody}
             footer={cartFooter}
@@ -78,7 +88,7 @@ const Cart: FC<IProps> = (): JSX.Element => {
         {cartData.length === 0 && (
           <BaseModal
             className={styles.emptyCart}
-            title="cart"
+            title={t<string>("cart.cart")}
             body={cartBodyEmpty}
             footer={cartFooterEmpty}
           />

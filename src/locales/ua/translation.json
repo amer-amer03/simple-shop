@@ -1,0 +1,35 @@
+{
+  "header": {
+    "login": "Вхід",
+    "registration": "Реєстрація",
+    "logout": "Вихід"
+  },
+  "catalog": {
+    "sortBy": {
+      "priceAsc": "Від дешевих до дорогих",
+      "priceDes": "Від дешевих до дорогих",
+      "ratingAsc": "Оцінка: від низької до високої",
+      "ratingDes": "Оцінка: від високої до низької"
+    },
+    "checkOut": "Перегляньте наш каталог",
+    "toggleView": "Переключити вигляд",
+    "addToCart": "Додати в кошик",
+    "loadMore": "Завантажити ще"
+  },
+  "cart": {
+    "cart": "Кошик",
+    "finalizePurchase": "Завершити покупку",
+    "noItems": "Кошик пустий",
+    "continueShopping": "Продовжити покупки",
+    "total": "Сума"
+  },
+  "check": {
+    "check": "Чек",
+    "totalPrice": "Загальна сума",
+    "thanks": "Спасибі за покупку",
+    "quantity": "Кількість",
+    "description": "Опис",
+    "unitPrice": "Ціна за одиницю",
+    "additional": "Додатки"
+  }
+}

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { IProps } from "../../interfaces/props";
 import { clearCart } from "../../store/actions/cart";
@@ -13,15 +14,8 @@ import BaseTypography from "../BaseTypography";
 import CheckTable from "../CheckTable";
 import styles from "./index.module.scss";
 
-const tableHeaders = [
-  "Quantity",
-  "Description",
-  "Unit price",
-  "Additional",
-  "Total price",
-];
-
 const Check: FC<IProps> = (): JSX.Element => {
+  const { t } = useTranslation();
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();
@@ -32,7 +26,7 @@ const Check: FC<IProps> = (): JSX.Element => {
       <div className={styles.total}>
         <BaseTypography
           className={styles.total}
-          value={`Total price - ${cartTotalPrice} ₴`}
+          value={`${t<string>("check.totalPrice")} - ${cartTotalPrice} ₴`}
         />
       </div>
     </>
@@ -62,14 +56,14 @@ const Check: FC<IProps> = (): JSX.Element => {
       <div className={styles.total}>
         <BaseTypography
           className={styles.total}
-          value={`Total price - ${cartTotalPrice} ₴`}
+          value={`${t<string>("check.totalPrice")} - ${cartTotalPrice} ₴`}
         />
       </div>
     </>
   );
 
   const handleCloseModal = () => {
-    dispatch(addNotification("Thank you for your purchase"));
+    dispatch(addNotification(t<string>("check.thanks")));
     dispatch(hideModal());
     dispatch(clearCart());
   };

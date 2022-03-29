@@ -1,3 +1,4 @@
+import "./i18n";
 import { FC } from "react";
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
@@ -8,7 +9,6 @@ import { modalSelector } from "./store/selectors/modal";
 import Layout from "./components/Layout";
 import "./App.css";
 import { ROUTES } from "./utils/constants/urls";
-
 const App: FC = () => {
   const openModalType = useSelector(modalSelector);
 

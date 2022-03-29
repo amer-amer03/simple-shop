@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
 import BaseTypography from "../BaseTypography";
@@ -8,22 +9,24 @@ interface Props extends IProps {
   cartData: ICatalogDataResults[];
 }
 
-const headers = [
-  "Quantity",
-  "Description",
-  "Unit price",
-  "Additional",
-  "Total price",
-];
-
 const CheckTable: FC<Props> = ({ cartData }): JSX.Element => {
+  const { t } = useTranslation();
+
+  const headers = [
+    t<string>("check.quantity"),
+    t<string>("check.description"),
+    t<string>("check.unitPrice"),
+    t<string>("check.additional"),
+    t<string>("cart.total"),
+  ];
+
   return (
     <table className={styles.table}>
       <tbody>
         <tr className={styles.item}>
           {headers.map((header) => {
             return (
-              <th>
+              <th key={header}>
                 <BaseTypography value={header} />
               </th>
             );

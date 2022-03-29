@@ -1,0 +1,35 @@
+{
+  "header": {
+    "login": "Login",
+    "registration": "Registration",
+    "logout": "Logout"
+  },
+  "catalog": {
+    "sortBy": {
+      "priceAsc": "Price: low to high",
+      "priceDes": "Price: high to low",
+      "ratingAsc": "Review: low to high",
+      "ratingDes": "Review: high to low"
+    },
+    "checkOut": "Check out our catalog",
+    "toggleView": "Toggle View",
+    "addToCart": "Add to cart",
+    "loadMore": "Load more"
+  },
+  "cart": {
+    "cart": "Cart",
+    "finalizePurchase": "Finalize purchase",
+    "noItems": "No items",
+    "continueShopping": "Continue shopping",
+    "total": "Total"
+  },
+  "check": {
+    "check": "Check",
+    "totalPrice": "Total price",
+    "thanks": "Thank you for your purchase",
+    "quantity": "Quantity",
+    "description": "Description",
+    "unitPrice": "Unit price",
+    "additional": "Additional"
+  }
+}

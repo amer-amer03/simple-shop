@@ -172,7 +172,7 @@ const Registration: FC = (): JSX.Element => {
   return (
     <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
       <BaseModal
-        title="cart"
+        title="registration"
         body={registrationBody}
         footer={registrationFooter}
       />

@@ -1,4 +1,5 @@
 import { FC, FormEvent, useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 import { IOption } from "../../interfaces/options";
 import { IProps } from "../../interfaces/props";
@@ -14,27 +15,10 @@ interface Props extends IProps {
 
 let catalogArray: ICatalogDataResults[] = [];
 
-const sortByOptions: IOption[] = [
-  {
-    value: "priceAsc",
-    label: "Price: low to high",
-  },
-  {
-    value: "priceDes",
-    label: "Price: high to low",
-  },
-  {
-    value: "ratingAsc",
-    label: "Review: low to high",
-  },
-  {
-    value: "ratingDes",
-    label: "Review: high to low",
-  },
-];
 const itemsPerPage = 20;
 
 const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
+  const { t } = useTranslation();
   const [itemsToShow, setItemsToShow] = useState<ICatalogDataResults[]>([]);
   const [next, setNext] = useState<number>(itemsPerPage);
   const [sortOrder, setSortOrder] = useState<string>("priceAsc");
@@ -50,6 +34,25 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
     },
     [orderedCatalog]
   );
+
+  const sortByOptions: IOption[] = [
+    {
+      value: "priceAsc",
+      label: t<string>("catalog.sortBy.priceAsc"),
+    },
+    {
+      value: "priceDes",
+      label: t<string>("catalog.sortBy.priceDes"),
+    },
+    {
+      value: "ratingAsc",
+      label: t<string>("catalog.sortBy.ratingAsc"),
+    },
+    {
+      value: "ratingDes",
+      label: t<string>("catalog.sortBy.ratingDes"),
+    },
+  ];
 
   useEffect(() => {
     loopWithSlice(0, itemsPerPage);
@@ -100,7 +103,7 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
         <BaseSelect options={sortByOptions} onChange={handleChange} />
         <div className={styles.toggle}>
           <BaseSwitch
-            label="Toggle view"
+            label={t<string>("catalog.toggleView")}
             checked={checkedSwitch}
             onChange={handleViewSwitch}
           />
@@ -113,7 +116,7 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
           className={styles.loadMoreButton}
           onClick={handleShowMorePosts}
           type="button"
-          value="Load more"
+          value={t<string>("catalog.loadMore")}
         />
       )}
     </div>
