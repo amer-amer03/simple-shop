@@ -12,7 +12,11 @@ interface Props extends IProps {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const LabelInput: React.FC<Props> = ({ className, label, ...props }) => {
+const LabelInput: React.FC<Props> = ({
+  className,
+  label,
+  ...props
+}): JSX.Element => {
   return (
     <div className={styles.root}>
       <BaseTypography className={styles.label} value={label} />

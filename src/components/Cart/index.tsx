@@ -12,8 +12,9 @@ import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
 import CartItem from "../CartItem";
 import styles from "./index.module.scss";
+import { Action } from "@reduxjs/toolkit";
 
-const Cart: React.FC<IProps> = () => {
+const Cart: React.FC<IProps> = (): JSX.Element => {
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();
@@ -28,12 +29,12 @@ const Cart: React.FC<IProps> = () => {
     dispatch(setCartTotal(total));
   }, [cartData, dispatch]);
 
-  const handleCloseModal = () => {
-    dispatch(hideModal());
+  const handleCloseModal = (): Action => {
+    return dispatch(hideModal());
   };
 
-  const finalizePurchase = () => {
-    dispatch(openModal("check"));
+  const finalizePurchase = (): Action => {
+    return dispatch(openModal("check"));
   };
 
   const cartBody = cartData.map((item, index) => {

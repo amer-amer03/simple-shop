@@ -20,7 +20,7 @@ const schema = yup
   })
   .required();
 
-const Login = () => {
+const Login: React.FC = (): JSX.Element => {
   const dispatch = useDispatch();
   const userData = useSelector(authUserSelector);
 

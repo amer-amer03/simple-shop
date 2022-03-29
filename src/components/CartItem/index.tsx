@@ -1,3 +1,4 @@
+import { Action } from "@reduxjs/toolkit";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { ICatalogDataResults } from "../../interfaces/catalog";
@@ -20,18 +21,21 @@ interface Props extends IProps {
   index: number;
 }
 
-const CartItem: React.FC<Props> = ({ item }) => {
+const CartItem: React.FC<Props> = ({ item }): JSX.Element => {
   const dispatch = useDispatch();
 
-  const handleIncreaseCartItem = (i: ICatalogDataResults) => {
-    dispatch(increaseCartItem(i));
+  const handleIncreaseCartItem = (i: ICatalogDataResults): Action => {
+    return dispatch(increaseCartItem(i));
   };
-  const handleDecreaseCartItem = (i: ICatalogDataResults) => {
-    dispatch(decreaseCartItem(i));
+  const handleDecreaseCartItem = (i: ICatalogDataResults): Action => {
+    return dispatch(decreaseCartItem(i));
   };
 
-  const handletoggleSpecs = (item: ICatalogDataResults, spec: string) => {
-    dispatch(toggleSpecs(item, spec));
+  const handletoggleSpecs = (
+    item: ICatalogDataResults,
+    spec: string
+  ): Action => {
+    return dispatch(toggleSpecs(item, spec));
   };
 
   useEffect(() => {
@@ -45,7 +49,7 @@ const CartItem: React.FC<Props> = ({ item }) => {
   }, [item.specs, item.priceSale, item.id, item.quantity, dispatch]);
 
   const handleRemoveItem = () => {
-    dispatch(removeCartItem(item));
+    return dispatch(removeCartItem(item));
   };
 
   return (

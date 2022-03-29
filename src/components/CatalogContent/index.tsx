@@ -13,7 +13,10 @@ interface Props extends IProps {
   checkedSwitch: boolean;
 }
 
-const CatalogContent: React.FC<Props> = ({ item, checkedSwitch }) => {
+const CatalogContent: React.FC<Props> = ({
+  item,
+  checkedSwitch,
+}): JSX.Element => {
   const dispatch = useDispatch();
 
   const handleAddCartItem = (i: ICatalogDataResults) => {

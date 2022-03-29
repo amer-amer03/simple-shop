@@ -11,7 +11,7 @@ import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
 
-const Check: React.FC<IProps> = () => {
+const Check: React.FC<IProps> = (): JSX.Element => {
   const cartData = useSelector(cartDataSelector);
   const cartTotalPrice = useSelector(cartTotalPriceSelector);
   const dispatch = useDispatch();

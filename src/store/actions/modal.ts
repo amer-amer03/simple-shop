@@ -13,6 +13,6 @@ export const openModal: ActionCreator<IModalAction> = (modalType: string): IModa
     return { type: ModalTypes.SHOW_MODAL, payload: modalType }
 }
 
-export const hideModal: ActionCreator<Action> = () => {
+export const hideModal: ActionCreator<Action> = (): Action => {
     return { type: ModalTypes.HIDE_MODAL }
 }

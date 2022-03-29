@@ -8,7 +8,7 @@ interface Props extends IProps {
   to: string;
 }
 
-const BaseLink: FC<Props> = ({ to, className, children }) => {
+const BaseLink: FC<Props> = ({ to, className, children }): JSX.Element => {
   return (
     <Link className={classNames(styles.baseLink, className)} to={to}>
       {children}

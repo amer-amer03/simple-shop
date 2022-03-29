@@ -30,11 +30,11 @@ export const increaseCartItem: ActionCreator<ICartAction> = (item: ICatalogDataR
     return { type: CartTypes.INCREASE_CART_ITEM, payload: item };
 };
 
-export const decreaseCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults) => {
+export const decreaseCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults): ICartAction => {
     return { type: CartTypes.DECREASE_CART_ITEM, payload: item };
 };
 
-export const removeCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults) => {
+export const removeCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults): ICartAction => {
     return { type: CartTypes.REMOVE_CART_ITEM, payload: item };
 };
 

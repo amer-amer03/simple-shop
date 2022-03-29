@@ -14,7 +14,7 @@ const BaseCheckbox: React.FC<Props> = ({
   checked,
   className,
   onChange,
-}) => {
+}): JSX.Element => {
   return (
     <label className={classNames(styles.root, className)}>
       <input

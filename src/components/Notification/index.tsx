@@ -6,14 +6,14 @@ import BaseTypography from "../BaseTypography";
 import Close from "../icons/Close";
 import styles from "./index.module.scss";
 
-const Notification = () => {
+const Notification: React.FC = (): JSX.Element | null => {
   const dispatch = useDispatch();
   const notificationType = useSelector(notificationSelector);
 
   useEffect(() => {
     if (notificationType) {
       setTimeout(() => {
-        dispatch(removeNotification());
+        return dispatch(removeNotification());
       }, 3000);
     }
   }, [notificationType, dispatch]);
@@ -21,7 +21,7 @@ const Notification = () => {
   if (!notificationType) return null;
 
   const handleHideModal = () => {
-    dispatch(removeNotification());
+    return dispatch(removeNotification());
   };
 
   return (

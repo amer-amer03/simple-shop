@@ -34,7 +34,7 @@ const sortByOptions: IOption[] = [
   },
 ];
 
-const Catalog: React.FC<Props> = ({ catalog }) => {
+const Catalog: React.FC<Props> = ({ catalog }): JSX.Element => {
   const [itemsToShow, setItemsToShow] = useState<ICatalogDataResults[]>([]);
   const [next, setNext] = useState<number>(20);
   const [sortOrder, setSortOrder] = useState<string>("priceAsc");

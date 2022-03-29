@@ -1,3 +1,4 @@
+import { Action } from "@reduxjs/toolkit";
 import classNames from "classnames";
 import { FC, ReactNode } from "react";
 import { useDispatch } from "react-redux";
@@ -13,12 +14,19 @@ interface Props extends IProps {
   onClose?: () => void;
 }
 
-const BaseModal: FC<Props> = ({ title, body, footer, className, onClose }) => {
+const BaseModal: FC<Props> = ({
+  title,
+  body,
+  footer,
+  className,
+  onClose,
+}): JSX.Element => {
   const dispatch = useDispatch();
 
-  const handleHideModal = () => {
-    dispatch(hideModal());
+  const handleHideModal = (): Action => {
+    return dispatch(hideModal());
   };
+
   return (
     <div className={classNames(styles.root, className)}>
       <div

@@ -1,4 +1,5 @@
 import { Action, ActionCreator, Dispatch } from "redux";
+import { ThunkAction } from "redux-thunk/es/types";
 import { getCatalogData } from "../../api/catalog";
 import { ICatalogDataResults } from "../../interfaces/catalog";
 
@@ -29,4 +30,4 @@ export const loadingCatalogData = () => {
             console.log("failed to load")
         }
     }
-} 
+}

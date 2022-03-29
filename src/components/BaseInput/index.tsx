@@ -14,7 +14,7 @@ const BaseInput: React.FC<Props> = ({
   placeholder,
   className,
   type = "text",
-}) => {
+}): JSX.Element => {
   return (
     <input
       type={type}

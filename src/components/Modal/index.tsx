@@ -11,7 +11,7 @@ interface Props extends IProps {
   modalOpenType: string;
 }
 
-const Modal: FC<Props> = ({ modalOpenType }) => {
+const Modal: FC<Props> = ({ modalOpenType }): JSX.Element | null => {
   useEffect(() => {
     if (modalOpenType) document.body.style.overflow = "hidden";
     if (!modalOpenType) document.body.style.overflow = "auto";

@@ -8,7 +8,11 @@ interface Props extends IProps {
   label: string;
 }
 
-const BaseSwitch: React.FC<Props> = ({ checked, label, onChange }) => {
+const BaseSwitch: React.FC<Props> = ({
+  checked,
+  label,
+  onChange,
+}): JSX.Element => {
   return (
     <>
       <BaseTypography value={label} />

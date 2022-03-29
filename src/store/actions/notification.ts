@@ -13,6 +13,6 @@ export const addNotification: ActionCreator<INotificationAction> = (message: str
     return { type: NotificationTypes.ADD_NOTIFICATION, payload: message }
 }
 
-export const removeNotification: ActionCreator<Action> = () => {
+export const removeNotification: ActionCreator<Action> = (): Action => {
     return { type: NotificationTypes.ADD_NOTIFICATION }
 }

@@ -12,7 +12,7 @@ const BaseButton: React.FC<Props> = ({
   className,
   type = "submit",
   onClick = () => null,
-}) => {
+}): JSX.Element => {
   return (
     <button
       type={type}

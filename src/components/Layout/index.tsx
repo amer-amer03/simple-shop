@@ -4,7 +4,7 @@ import Header from "../Header";
 import Notification from "../Notification";
 import styles from "./index.module.scss";
 
-const Layout: React.FC<IProps> = ({ children }) => {
+const Layout: React.FC<IProps> = ({ children }): JSX.Element => {
   return (
     <div className={styles.root}>
       <div>

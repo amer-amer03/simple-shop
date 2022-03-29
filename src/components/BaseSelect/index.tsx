@@ -6,11 +6,13 @@ interface Props extends IProps {
   options: IOption[];
   onChange: (e: React.FormEvent<HTMLSelectElement>) => void;
 }
-const BaseSelect: React.FC<Props> = ({ options, onChange }) => {
+const BaseSelect: React.FC<Props> = ({ options, onChange }): JSX.Element => {
   return (
-    <select className={styles.root} onChange={(e) => onChange(e)} name="" id="">
+    <select className={styles.root} onChange={(e) => onChange(e)}>
       {options.map((item) => {
-        return <option value={item.value} label={item.label} />;
+        return (
+          <option key={item.value} value={item.value} label={item.label} />
+        );
       })}
     </select>
   );

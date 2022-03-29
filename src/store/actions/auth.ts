@@ -13,9 +13,9 @@ export interface IAuthAction extends Action {
 export const registerUser: ActionCreator<IAuthAction> = (userData: IUserData) => {
     return { type: AuthTypes.REGISTRATION, payload: userData }
 }
-export const loginUser: ActionCreator<Action> = () => {
+export const loginUser: ActionCreator<Action> = (): Action => {
     return { type: AuthTypes.LOGIN }
 }
-export const logoutUser: ActionCreator<Action> = () => {
+export const logoutUser: ActionCreator<Action> = (): Action => {
     return { type: AuthTypes.LOGOUT }
 }

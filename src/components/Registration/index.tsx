@@ -37,7 +37,7 @@ const schema = yup
   })
   .required();
 
-const Registration: React.FC = () => {
+const Registration: React.FC = (): JSX.Element => {
   const dispatch = useDispatch();
 
   const defaultValues: IRegistrationData = {

@@ -6,7 +6,7 @@ interface Props extends IProps {
   value: string | undefined;
 }
 
-const ErrorMessage: React.FC<Props> = ({ value }) => {
+const ErrorMessage: React.FC<Props> = ({ value }): JSX.Element => {
   return (
     <div className={styles.root}>
       <BaseTypography className={styles.text} value={value} />
