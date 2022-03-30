@@ -4,6 +4,24 @@
     "registration": "Registration",
     "logout": "Logout"
   },
+  "auth": {
+    "fieldRequired": "This field is required",
+    "emailValid": "Must be valid email",
+    "passwordValid": "Password must contain one uppercase, one lowercase, one number and one special case character",
+    "passwordMatch": "Passwords must match",
+    "fullName": "Full name",
+    "enterName": "Please enter your full name",
+    "email": "Email",
+    "enterEmail": "Please enter your email address",
+    "phoneNumber": "Phone number",
+    "enterNumber": "Please enter your phone number",
+    "password": "Password",
+    "enterPassword": "Please enter a password",
+    "secondPassword": "Re-enter password",
+    "enterSecondPassword": "Please re-enter your password",
+    "privacyPolicy": "Privacy policy",
+    "privacyPolicyText": "By clicking submit you agree to our privacy policy and terms and conditions"
+  },
   "catalog": {
     "sortBy": {
       "priceAsc": "Price: low to high",
@@ -31,5 +49,12 @@
     "description": "Description",
     "unitPrice": "Unit price",
     "additional": "Additional"
+  },
+  "notifications": {
+    "loggedOut": "You have logged out",
+    "loggedIn": "You are logged in",
+    "addedToCart": "added to cart",
+    "wrongEmail": "Wrong email or password",
+    "registeredSuccessfully": "You have registered successfully"
   }
 }

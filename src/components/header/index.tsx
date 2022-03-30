@@ -45,7 +45,7 @@ const Header: FC<IProps> = (): JSX.Element => {
 
   const logOut = () => {
     dispatch(logoutUser());
-    dispatch(addNotification("You have logged out"));
+    dispatch(addNotification(t<string>("notifications.logout")));
   };
 
   const changeLanguage = (
@@ -64,11 +64,15 @@ const Header: FC<IProps> = (): JSX.Element => {
       <BaseSelect
         className={styles.item}
         onChange={changeLanguage}
+        defaultValue={i18n.language}
         options={langOptions}
       />
       {isLogin && (
         <div className={styles.item}>
-          <BaseButton onClick={logOut} value={`${userData.name}: logout`} />
+          <BaseButton
+            onClick={logOut}
+            value={`${userData.name}: ${t<string>("header.logout")}`}
+          />
         </div>
       )}
 

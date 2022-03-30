@@ -13,17 +13,19 @@ import { hideModal } from "../../store/actions/modal";
 import { addNotification } from "../../store/actions/notification";
 import BaseModal from "../BaseModal";
 import styles from "./index.module.scss";
-
-const schema = yup
-  .object({
-    email: yup.string().required("This field is required"),
-    password: yup.string().required("This field is required"),
-  })
-  .required();
+import { useTranslation } from "react-i18next";
 
 const Login: FC = (): JSX.Element => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const userData = useSelector(authUserSelector);
+
+  const schema = yup
+    .object({
+      email: yup.string().required(t<string>("auth.fieldRequired")),
+      password: yup.string().required(t<string>("auth.fieldRequired")),
+    })
+    .required();
 
   const defaultValues: ILoginData = {
     email: "",
@@ -43,9 +45,9 @@ const Login: FC = (): JSX.Element => {
     if (userData.email === data.email && userData.password === data.password) {
       dispatch(loginUser());
       dispatch(hideModal());
-      dispatch(addNotification("You are logged in"));
+      dispatch(addNotification(t<string>("notifications.loggedIn")));
     } else {
-      dispatch(addNotification("Wrong email or password"));
+      dispatch(addNotification(t<string>("notifications.wrongEmail")));
     }
   };
 
@@ -57,8 +59,8 @@ const Login: FC = (): JSX.Element => {
           name="email"
           render={({ field: { ref, ...rest } }) => (
             <LabelInput
-              label="Email"
-              placeholder="Please enter your email address"
+              label={t<string>("auth.email")}
+              placeholder={t<string>("auth.enterEmail")}
               {...rest}
             />
           )}
@@ -72,9 +74,9 @@ const Login: FC = (): JSX.Element => {
           name="password"
           render={({ field: { ref, ...rest } }) => (
             <LabelInput
-              label="Password"
               type="password"
-              placeholder="Please enter a password"
+              label={t<string>("auth.password")}
+              placeholder={t<string>("auth.enterPassword")}
               {...rest}
             />
           )}
@@ -87,7 +89,11 @@ const Login: FC = (): JSX.Element => {
   const loginFooter = <BaseButton type="submit" value="submit" />;
   return (
     <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
-      <BaseModal title="login" body={loginBody} footer={loginFooter} />
+      <BaseModal
+        title={t<string>("header.login")}
+        body={loginBody}
+        footer={loginFooter}
+      />
     </form>
   );
 };

@@ -17,7 +17,7 @@
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 400px;
+    width: 370px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -27,9 +27,10 @@
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -60px;
     opacity: 0;
+    transform: translateX(-25%);
     transition: opacity 0.3s;
+    z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {

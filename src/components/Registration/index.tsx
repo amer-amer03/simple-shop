@@ -13,33 +13,32 @@ import { addNotification } from "../../store/actions/notification";
 import BaseModal from "../BaseModal";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
+import { useTranslation } from "react-i18next";
 
 const passwordValidationRegex =
   /^.*((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/;
 
-const schema = yup
-  .object({
-    name: yup.string().required("This field is required"),
-    email: yup
-      .string()
-      .email("Must be valid email")
-      .required("This field is required"),
-    phone: yup.string().required("This field is required"),
-    password1: yup
-      .string()
-      .matches(
-        passwordValidationRegex,
-        "Password must contain one uppercase, one lowercase, one number and one special case character"
-      )
-      .required("This field is required"),
-    password2: yup
-      .string()
-      .oneOf([yup.ref("password1"), null], "Passwords must match"),
-  })
-  .required();
-
 const Registration: FC = (): JSX.Element => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
+
+  const schema = yup
+    .object({
+      name: yup.string().required(t<string>("auth.fieldRequired")),
+      email: yup
+        .string()
+        .email(t<string>("auth.emailValid"))
+        .required(t<string>("auth.fieldRequired")),
+      phone: yup.string().required(t<string>("auth.fieldRequired")),
+      password1: yup
+        .string()
+        .matches(passwordValidationRegex, t<string>("auth.passwordValid"))
+        .required(t<string>("auth.fieldRequired")),
+      password2: yup
+        .string()
+        .oneOf([yup.ref("password1"), null], t<string>("auth.passwordMatch")),
+    })
+    .required();
 
   const defaultValues: IRegistrationData = {
     name: "",
@@ -66,7 +65,7 @@ const Registration: FC = (): JSX.Element => {
     };
     dispatch(registerUser(userData));
     dispatch(hideModal());
-    dispatch(addNotification("You have registered successfully"));
+    dispatch(addNotification(t<string>("auth.passwordMatch")));
   };
   const registrationBody = (
     <>
@@ -76,8 +75,8 @@ const Registration: FC = (): JSX.Element => {
           name="name"
           render={({ field: { ref, ...rest } }) => (
             <LabelInput
-              label="Full name"
-              placeholder="Please enter your full name"
+              label={t<string>("auth.fullName")}
+              placeholder={t<string>("auth.enterName")}
               {...rest}
             />
           )}
@@ -92,8 +91,8 @@ const Registration: FC = (): JSX.Element => {
           name="email"
           render={({ field: { ref, ...rest } }) => (
             <LabelInput
-              label="Email"
-              placeholder="Please enter your email address"
+              label={t<string>("auth.email")}
+              placeholder={t<string>("auth.enterEmail")}
               {...rest}
             />
           )}
@@ -108,8 +107,8 @@ const Registration: FC = (): JSX.Element => {
           name="phone"
           render={({ field: { ref, ...rest } }) => (
             <LabelInput
-              label="Phone number"
-              placeholder="Please enter your phone number"
+              label={t<string>("auth.phoneNumber")}
+              placeholder={t<string>("auth.enterNumber")}
               {...rest}
             />
           )}
@@ -124,9 +123,9 @@ const Registration: FC = (): JSX.Element => {
           name="password1"
           render={({ field: { ref, ...rest } }) => (
             <LabelInput
-              label="Password"
               type="password"
-              placeholder="Please enter a password"
+              label={t<string>("auth.password")}
+              placeholder={t<string>("auth.enterPassword")}
               {...rest}
             />
           )}
@@ -141,9 +140,9 @@ const Registration: FC = (): JSX.Element => {
           name="password2"
           render={({ field: { ref, ...rest } }) => (
             <LabelInput
-              label="Password"
               type="password"
-              placeholder="Please enter a password"
+              label={t<string>("auth.secondPassword")}
+              placeholder={t<string>("auth.enterSecondPassword")}
               {...rest}
             />
           )}
@@ -153,12 +152,9 @@ const Registration: FC = (): JSX.Element => {
         )}
       </div>
       <div className={styles.tooltip}>
-        Privacy policy
+        <BaseTypography value={t<string>("auth.privacyPolicy")} />
         <span className={styles.tooltiptext}>
-          <BaseTypography
-            value="By clicking submit you agree to our privacy policy and terms and
-          conditions"
-          />
+          <BaseTypography value={t<string>("auth.privacyPolicyText")} />
         </span>
       </div>
     </>
@@ -172,7 +168,7 @@ const Registration: FC = (): JSX.Element => {
   return (
     <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
       <BaseModal
-        title="registration"
+        title={t<string>("header.registration")}
         body={registrationBody}
         footer={registrationFooter}
       />

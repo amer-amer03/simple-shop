@@ -71,13 +71,13 @@ const Check: FC<IProps> = (): JSX.Element => {
   return (
     <>
       <BaseModal
-        title="Check"
+        title={t<string>("check.check")}
         className={styles.footerTable}
         onClose={handleCloseModal}
         body={checkBody}
       />
       <BaseModal
-        title="Check"
+        title={t<string>("check.check")}
         className={styles.footerList}
         onClose={handleCloseModal}
         body={checkSmallBody}

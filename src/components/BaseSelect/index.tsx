@@ -6,17 +6,20 @@ import styles from "./index.module.scss";
 
 interface Props extends IProps {
   options: IOption[];
+  defaultValue?: string;
   onChange: (e: FormEvent<HTMLSelectElement>) => void;
 }
 const BaseSelect: FC<Props> = ({
   options,
   className,
+  defaultValue,
   onChange,
 }): JSX.Element => {
   return (
     <select
       className={classNames(styles.root, className)}
       onChange={(e) => onChange(e)}
+      defaultValue={defaultValue}
     >
       {options.map((item) => {
         return (

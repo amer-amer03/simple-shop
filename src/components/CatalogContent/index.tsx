@@ -21,7 +21,7 @@ const CatalogContent: FC<Props> = ({ item, checkedSwitch }): JSX.Element => {
 
   const handleAddCartItem = (i: ICatalogDataResults) => {
     dispatch(increaseCartItem(i));
-    dispatch(addNotification(i.title + "- added to cart"));
+    dispatch(addNotification(`${i.title} - ${t<string>("catalog.addToCart")}`));
   };
 
   const starRating = (rating: number) => {

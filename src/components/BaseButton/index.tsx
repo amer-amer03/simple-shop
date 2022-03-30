@@ -11,7 +11,7 @@ interface Props extends IProps {
 const BaseButton: FC<Props> = ({
   value,
   className,
-  type = "submit",
+  type = "button",
   onClick = () => null,
 }): JSX.Element => {
   return (
