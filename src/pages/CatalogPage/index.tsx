@@ -4,7 +4,7 @@ import Catalog from "../../components/Catalog";
 import { loadingCatalogData } from "../../store/actions/catalog";
 import { catalogDataSelector } from "../../store/selectors/catalog";
 
-const CatalogPage: FC = () => {
+const CatalogPage: FC = (): JSX.Element => {
   const dispatch = useDispatch();
   const catalog = useSelector(catalogDataSelector);
 

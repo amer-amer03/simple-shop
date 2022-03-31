@@ -6,17 +6,22 @@
     justify-content: flex-end;
     align-items: center;
     padding: 20px;
-    background: rgb(240, 246, 252);
-    border-bottom: 1px solid rgb(194, 194, 194);
+    min-height: 35px;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
 }
 
 .icon {
     height: 30px;
+    content: var(--shopping-cart-url);
     &:hover {
         cursor: pointer;
     }
 }
-
+.items {
+    display: flex;
+    justify-content: center;
+}
 .item {
     margin: 0px 10px;
     display: flex;
@@ -30,9 +35,29 @@
         width: 15px;
         height: 15px;
         padding: 2px;
-        background: $primary-color;
+        background: var(--border);
         text-align: center;
         font-size: 12px;
+    }
+}
+.burgerMenu {
+    display: none;
+    height: 28px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@include xs-max {
+    .root {
+        padding: 5px;
+        justify-content: space-between;
+    }
+    .items {
+        display: none;
+    }
+    .burgerMenu {
+        display: block;
     }
 }
 

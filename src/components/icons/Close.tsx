@@ -1,9 +1,10 @@
 import { FC } from "react";
+import styles from "./index.module.scss";
 
 const Close: FC = (): JSX.Element => {
   return (
     <svg
-      fill="#000000"
+      className={styles.icon}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 50 40"
       width="20px"

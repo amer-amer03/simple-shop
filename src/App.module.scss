@@ -1,0 +1,28 @@
+:root {
+    --background: white;
+    --color: black;
+    --border: #dddddd;
+    --button-background: rgb(255, 255, 255);
+    --button-border: #3b3b3b;
+    --modal-background: white;
+    --placeholder: #b9b9b9;
+    --tooltip: #b9b9b9;
+    --shopping-cart-url: url("../public/assets/images/shoppingCart.png");
+}
+
+[data-theme="dark"] {
+    --background: #15141a;
+    --color: #fbfbfe;
+    --border: #52525e;
+    --button-background: #3b3b3b;
+    --button-border: #666666;
+    --modal-background: #333333;
+    --placeholder: #666666;
+    --tooltip: #414141;
+    --shopping-cart-url: url("../public/assets/images/shoppingCartWhite.png");
+}
+
+.App {
+    background-color: var(--background);
+    color: var(--color);
+}

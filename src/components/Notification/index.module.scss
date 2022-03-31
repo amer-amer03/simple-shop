@@ -6,9 +6,9 @@
     right: 0;
     padding: 50px;
     margin: 10px;
-    background: white;
+    background-color: var(--background);
     border-radius: 8px;
-    border: 2px solid $primary-color;
+    border: 2px solid var(--border);
     z-index: 2;
 }
 

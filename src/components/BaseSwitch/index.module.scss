@@ -1,5 +1,15 @@
 @import "../../../src/styles/variables";
-
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label {
+    font-size: 14px;
+    height: 16px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
 .switch {
     position: relative;
     display: inline-block;
@@ -38,11 +48,11 @@
 }
 
 input:checked + .slider {
-    background-color: $secondaty-color;
+    background-color: #0080ff;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px $secondaty-color;
+    box-shadow: 0 0 1px #0080ff;
 }
 
 input:checked + .slider:before {

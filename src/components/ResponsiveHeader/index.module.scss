@@ -1,0 +1,42 @@
+@import "../../styles/mixin";
+.root {
+    display: none;
+    position: fixed;
+    background: var(--background);
+    border: 2px solid var(--border);
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 2;
+}
+.icon {
+    content: var(--shopping-cart-url);
+    &:hover {
+        cursor: pointer;
+    }
+}
+.items {
+    padding: 40px 20px;
+
+    div:not(first-child) {
+        margin-top: 10px;
+    }
+    .switch {
+        padding-top: 0px;
+        justify-content: left;
+    }
+    .cart {
+        cursor: pointer;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    padding: 5px;
+    right: 0;
+}
+@include xs-max {
+    .root {
+        display: block;
+    }
+}

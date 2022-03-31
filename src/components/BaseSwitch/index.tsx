@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { FC } from "react";
 import { IProps } from "../../interfaces/props";
 import BaseTypography from "../BaseTypography";
@@ -9,15 +10,20 @@ interface Props extends IProps {
   label: string;
 }
 
-const BaseSwitch: FC<Props> = ({ checked, label, onChange }): JSX.Element => {
+const BaseSwitch: FC<Props> = ({
+  checked,
+  label,
+  className,
+  onChange,
+}): JSX.Element => {
   return (
-    <>
-      <BaseTypography value={label} />
-      <label className={styles.switch}>
+    <div className={classNames(styles.root, className)}>
+      <BaseTypography className={styles.label} value={label} />
+      <label className={classNames(styles.switch)}>
         <input type="checkbox" checked={checked} onChange={onChange} />
         <span className={styles.slider} />
       </label>
-    </>
+    </div>
   );
 };
 

@@ -10,7 +10,7 @@ export enum AuthTypes {
 export interface IAuthAction extends Action {
     payload: IUserData;
 }
-export const registerUser: ActionCreator<IAuthAction> = (userData: IUserData) => {
+export const registerUser: ActionCreator<IAuthAction> = (userData: IUserData): IAuthAction => {
     return { type: AuthTypes.REGISTRATION, payload: userData }
 }
 export const loginUser: ActionCreator<Action> = (): Action => {

@@ -9,9 +9,10 @@ import styles from "./index.module.scss";
 
 interface Props extends IProps {
   modalOpenType: string;
+  theme: string;
 }
 
-const Modal: FC<Props> = ({ modalOpenType }): JSX.Element | null => {
+const Modal: FC<Props> = ({ modalOpenType, theme }): JSX.Element | null => {
   useEffect(() => {
     if (modalOpenType) document.body.style.overflow = "hidden";
     if (!modalOpenType) document.body.style.overflow = "auto";
@@ -35,7 +36,7 @@ const Modal: FC<Props> = ({ modalOpenType }): JSX.Element | null => {
   if (!modalOpenType) return null;
 
   return createPortal(
-    <div className={styles.root}>
+    <div className={styles.root} data-theme={theme}>
       <div className={styles.modalContent}>
         <div className={styles.modalHeader}></div>
         <div className={styles.body}>{modalContent(modalOpenType)}</div>

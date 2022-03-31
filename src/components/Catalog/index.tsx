@@ -101,13 +101,12 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
     <div className={styles.root}>
       <div className={styles.switches}>
         <BaseSelect options={sortByOptions} onChange={handleChange} />
-        <div className={styles.toggle}>
-          <BaseSwitch
-            label={t<string>("catalog.toggleView")}
-            checked={checkedSwitch}
-            onChange={handleViewSwitch}
-          />
-        </div>
+        <BaseSwitch
+          className={styles.switch}
+          label={t<string>("catalog.toggleView")}
+          checked={checkedSwitch}
+          onChange={handleViewSwitch}
+        />
       </div>
       <div className={styles.catalog}>{catalogContent}</div>
 
