@@ -1,12 +1,12 @@
-import { ICatalogDataResults } from "../../interfaces/catalog";
+import { ICatalogDataResults, ISpecs } from "../../interfaces/catalog";
 
-export const increaseCartItemQuantity = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults) => {
+export const increaseCartItemQuantity = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults): ICatalogDataResults[] => {
     let updatedItems: ICatalogDataResults[] = [];
-    const itemExist = allCartItems.find((cartItem) => {
+    const itemExist = allCartItems.find((cartItem: ICatalogDataResults) => {
         return cartItem.id === currentCartItem.id;
     });
     if (itemExist) {
-        updatedItems = allCartItems.map((cartItem) => {
+        updatedItems = allCartItems.map((cartItem: ICatalogDataResults) => {
             return cartItem.id === currentCartItem.id
                 ? { ...cartItem, quantity: cartItem.quantity && cartItem.quantity + 1 }
                 : cartItem;
@@ -17,19 +17,19 @@ export const increaseCartItemQuantity = (allCartItems: ICatalogDataResults[], cu
     return updatedItems;
 };
 
-export const removeCartItem = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults) => {
+export const removeCartItem = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults): ICatalogDataResults[] => {
     return allCartItems.filter((cartItem) => cartItem.id !== currentCartItem.id);
 };
 
-export const decreaseCartItemQuantity = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults) => {
+export const decreaseCartItemQuantity = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults): ICatalogDataResults[] => {
     let updatedItems: ICatalogDataResults[] = [];
-    const itemExist = allCartItems.find((cartItem) => {
+    const itemExist = allCartItems.find((cartItem: ICatalogDataResults) => {
         return cartItem.id === currentCartItem.id;
     });
     if (itemExist?.quantity === 1) {
         updatedItems = removeCartItem(allCartItems, currentCartItem);
     } else {
-        updatedItems = allCartItems.map((cartItem) => {
+        updatedItems = allCartItems.map((cartItem: ICatalogDataResults) => {
             return cartItem.id === currentCartItem.id
                 ? { ...cartItem, quantity: cartItem.quantity && cartItem.quantity - 1 }
                 : cartItem;
@@ -38,10 +38,10 @@ export const decreaseCartItemQuantity = (allCartItems: ICatalogDataResults[], cu
     return updatedItems;
 };
 
-export const toggleSpecs = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults, selectedSpec: string) => {
-    const selectedItem = allCartItems.find((cartItem) => cartItem.id === currentCartItem.id);
+export const toggleSpecs = (allCartItems: ICatalogDataResults[], currentCartItem: ICatalogDataResults, selectedSpec: string): ICatalogDataResults[] => {
+    const selectedItem = allCartItems.find((cartItem: ICatalogDataResults) => cartItem.id === currentCartItem.id);
 
-    const updatedSpecs = selectedItem?.specs.map((spec) => {
+    const updatedSpecs = selectedItem?.specs.map((spec: ISpecs) => {
         return spec.title === selectedSpec ?
             { ...spec, checked: !spec.checked }
             : spec
@@ -49,7 +49,7 @@ export const toggleSpecs = (allCartItems: ICatalogDataResults[], currentCartItem
 
     let updatedItems: ICatalogDataResults[] = [];
 
-    updatedItems = allCartItems.map((cartItem) => {
+    updatedItems = allCartItems.map((cartItem: ICatalogDataResults) => {
         return cartItem.id === currentCartItem.id
             ? {
                 ...cartItem,
@@ -61,10 +61,10 @@ export const toggleSpecs = (allCartItems: ICatalogDataResults[], currentCartItem
     return updatedItems;
 };
 
-export const setTotalPrice = (allCartItems: ICatalogDataResults[], itemId: number, totalPrice: number) => {
+export const setTotalPrice = (allCartItems: ICatalogDataResults[], itemId: number, totalPrice: number): ICatalogDataResults[] => {
     let updatedItems: ICatalogDataResults[] = [];
 
-    updatedItems = allCartItems.map((cartItem) => {
+    updatedItems = allCartItems.map((cartItem: ICatalogDataResults) => {
         return cartItem.id === itemId
             ? { ...cartItem, totalPrice: totalPrice }
             : cartItem;

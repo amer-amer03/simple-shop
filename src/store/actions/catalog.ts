@@ -11,7 +11,7 @@ export interface ICatalogAction extends Action {
     payload: ICatalogDataResults[];
 }
 
-const loadingCatalogDataRequest: ActionCreator<Action> = () => {
+const loadingCatalogDataRequest: ActionCreator<Action> = (): Action => {
     return { type: CatalogDataTypes.LOADING_CATALOGDATA_REQUEST }
 }
 

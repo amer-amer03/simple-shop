@@ -1,4 +1,6 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { persistStore } from "redux-persist";
+import { persistReducer } from "redux-persist";
 import thunk from 'redux-thunk';
 import catalogReducer, { ICatalogState, initState as catalogState } from './reducers/catalog';
 import modalReducer, { IModalState, initState as modalState } from './reducers/modal';
@@ -6,8 +8,6 @@ import authReducer, { IAuthState, initState as authState } from './reducers/auth
 import notificationReducer, { INotificationState, initState as notificationState } from './reducers/notification';
 import cartReducer, { ICartState, initState as cartState } from './reducers/cart';
 import themeReducer, { IThemeState, initState as themeState } from './reducers/theme';
-import { persistStore } from "redux-persist";
-import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 export interface ISimpleShopState {

@@ -18,7 +18,7 @@ const Modal: FC<Props> = ({ modalOpenType, theme }): JSX.Element | null => {
     if (!modalOpenType) document.body.style.overflow = "auto";
   }, [modalOpenType]);
 
-  const modalContent = (openModalType: string) => {
+  const modalContent = (openModalType: string): JSX.Element | null => {
     switch (openModalType) {
       case "registration":
         return <Registration />;

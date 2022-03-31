@@ -21,7 +21,7 @@ const BaseSelect: FC<Props> = ({
       onChange={(e) => onChange(e)}
       defaultValue={defaultValue}
     >
-      {options.map((item) => {
+      {options.map((item: IOption) => {
         return (
           <option key={item.value} value={item.value} label={item.label} />
         );

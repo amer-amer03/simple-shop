@@ -41,7 +41,7 @@ const Login: FC = (): JSX.Element => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data: ILoginData) => {
+  const onSubmit = (data: ILoginData): void => {
     if (userData.email === data.email && userData.password === data.password) {
       dispatch(loginUser());
       dispatch(hideModal());
@@ -86,7 +86,10 @@ const Login: FC = (): JSX.Element => {
     </>
   );
 
-  const loginFooter = <BaseButton type="submit" value="submit" />;
+  const loginFooter = (
+    <BaseButton type="submit"> {t<string>("auth.submit")} </BaseButton>
+  );
+
   return (
     <form className={styles.root} onSubmit={handleSubmit(onSubmit)}>
       <BaseModal

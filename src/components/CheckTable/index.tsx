@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { ICatalogDataResults } from "../../interfaces/catalog";
+import { ICatalogDataResults, ISpecs } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
 import BaseTypography from "../BaseTypography";
 import styles from "./index.module.scss";
@@ -24,7 +24,7 @@ const CheckTable: FC<Props> = ({ cartData }): JSX.Element => {
     <table className={styles.table}>
       <tbody>
         <tr className={styles.item}>
-          {headers.map((header) => {
+          {headers.map((header: string) => {
             return (
               <th key={header}>
                 <BaseTypography value={header} />
@@ -32,7 +32,7 @@ const CheckTable: FC<Props> = ({ cartData }): JSX.Element => {
             );
           })}
         </tr>
-        {cartData.map((item) => {
+        {cartData.map((item: ICatalogDataResults) => {
           return (
             <tr key={item.id}>
               <td>{item.quantity}</td>
@@ -40,7 +40,7 @@ const CheckTable: FC<Props> = ({ cartData }): JSX.Element => {
               <td>{item.price}</td>
               <td>
                 <ul>
-                  {item.specs.map((spec) => {
+                  {item.specs.map((spec: ISpecs) => {
                     return (
                       spec.checked && (
                         <li key={spec.title}>{spec.description}</li>

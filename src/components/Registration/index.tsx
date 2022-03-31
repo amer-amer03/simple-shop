@@ -56,7 +56,7 @@ const Registration: FC = (): JSX.Element => {
     defaultValues,
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data: IRegistrationData) => {
+  const onSubmit = (data: IRegistrationData): void => {
     const userData: IUserData = {
       name: data.name,
       email: data.email,
@@ -162,7 +162,7 @@ const Registration: FC = (): JSX.Element => {
 
   const registrationFooter = (
     <div className={styles.button}>
-      <BaseButton type="submit" value="submit" />
+      <BaseButton type="submit"> {t<string>("auth.submit")} </BaseButton>
     </div>
   );
   return (

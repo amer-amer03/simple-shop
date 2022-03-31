@@ -23,7 +23,6 @@ export interface ICartItemAction extends Action {
 }
 export interface ICartTotalAction extends Action {
     payload: number;
-
 }
 
 export const increaseCartItem: ActionCreator<ICartAction> = (item: ICatalogDataResults): ICartAction => {

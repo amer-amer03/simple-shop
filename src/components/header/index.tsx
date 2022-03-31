@@ -51,7 +51,7 @@ const Header: FC<IProps> = (): JSX.Element => {
     return dispatch(openModal("login"));
   };
 
-  const logOut = () => {
+  const logOut = (): void => {
     dispatch(logoutUser());
     dispatch(addNotification(t<string>("notifications.logout")));
   };
@@ -102,24 +102,21 @@ const Header: FC<IProps> = (): JSX.Element => {
         />
         {isLogin && (
           <div className={styles.item}>
-            <BaseButton
-              onClick={logOut}
-              value={`${userData.name}: ${t<string>("header.logout")}`}
-            />
+            <BaseButton onClick={logOut}>
+              {`${userData.name}: ${t<string>("header.logout")}`}
+            </BaseButton>
           </div>
         )}
 
         {!isLogin && (
           <div className={styles.item}>
-            <BaseButton
-              onClick={openRegistrationModal}
-              value={t<string>("header.registration")}
-            />
+            <BaseButton onClick={openRegistrationModal}>
+              {t<string>("header.registration")}
+            </BaseButton>
             <div className={styles.item}>
-              <BaseButton
-                onClick={openLoginModal}
-                value={t<string>("header.login")}
-              />
+              <BaseButton onClick={openLoginModal}>
+                {t<string>("header.login")}
+              </BaseButton>
             </div>
           </div>
         )}

@@ -88,11 +88,11 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
     let value = e.currentTarget.value;
     setSortOrder(value);
   };
-  const handleViewSwitch = () => {
+  const handleViewSwitch = (): void => {
     setCheckedSwitch(!checkedSwitch);
   };
 
-  const catalogContent = itemsToShow.map((item) => {
+  const catalogContent = itemsToShow.map((item: ICatalogDataResults) => {
     return (
       <CatalogContent key={item.id} item={item} checkedSwitch={checkedSwitch} />
     );
@@ -115,8 +115,9 @@ const Catalog: FC<Props> = ({ catalog }): JSX.Element => {
           className={styles.loadMoreButton}
           onClick={handleShowMorePosts}
           type="button"
-          value={t<string>("catalog.loadMore")}
-        />
+        >
+          {t<string>("catalog.loadMore")}
+        </BaseButton>
       )}
     </div>
   );

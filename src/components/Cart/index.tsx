@@ -14,6 +14,7 @@ import BaseTypography from "../BaseTypography";
 import CartItem from "../CartItem";
 import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
+import { ICatalogDataResults } from "../../interfaces/catalog";
 
 const Cart: FC<IProps> = (): JSX.Element => {
   const { t } = useTranslation();
@@ -39,7 +40,7 @@ const Cart: FC<IProps> = (): JSX.Element => {
     return dispatch(openModal("check"));
   };
 
-  const cartBody = cartData.map((item, index) => {
+  const cartBody = cartData.map((item: ICatalogDataResults, index: number) => {
     return <CartItem key={item.id} item={item} index={index} />;
   });
 
@@ -50,10 +51,9 @@ const Cart: FC<IProps> = (): JSX.Element => {
           value={`${t<string>("cart.total")}: ${cartTotalPrice} ₴`}
         />
         <div></div>
-        <BaseButton
-          onClick={finalizePurchase}
-          value={t<string>("cart.finalizePurchase")}
-        />
+        <BaseButton onClick={finalizePurchase}>
+          {t<string>("cart.finalizePurchase")}
+        </BaseButton>
       </div>
     </div>
   );
@@ -66,10 +66,9 @@ const Cart: FC<IProps> = (): JSX.Element => {
 
   const cartFooterEmpty = (
     <div className={styles.emptyCartButton}>
-      <BaseButton
-        onClick={handleCloseModal}
-        value={t<string>("cart.continueShopping")}
-      />
+      <BaseButton onClick={handleCloseModal}>
+        {t<string>("cart.continueShopping")}
+      </BaseButton>
     </div>
   );
 

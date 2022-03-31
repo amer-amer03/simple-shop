@@ -20,7 +20,8 @@
     "secondPassword": "Повторний пароль",
     "enterSecondPassword": "Будь ласка, введіть свій пароль повторно",
     "privacyPolicy": "Політика конфіденційності",
-    "privacyPolicyText": "Натиснувши «Надіслати», ви погоджуєтеся з нашою політикою конфіденційності та умовами"
+    "privacyPolicyText": "Натиснувши «Надіслати», ви погоджуєтеся з нашою політикою конфіденційності та умовами",
+    "submit": "Відправити"
   },
   "catalog": {
     "sortBy": {
@@ -56,6 +57,6 @@
     "loggedIn": "Ви ввійшли в систему",
     "addedToCart": "додано в кошик",
     "wrongEmail": "Невірний логін або пароль",
-    "registeredSuccessfully": "You have registered successfully"
+    "registeredSuccessfully": "Ви успішно зареєструвалися"
   }
 }

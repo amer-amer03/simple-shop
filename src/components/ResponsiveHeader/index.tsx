@@ -7,7 +7,6 @@ import { IProps } from "../../interfaces/props";
 import BaseButton from "../BaseButton";
 import BaseSelect from "../BaseSelect";
 import BaseSwitch from "../BaseSwitch";
-import BaseTypography from "../BaseTypography";
 import Close from "../icons/Close";
 import styles from "./index.module.scss";
 
@@ -62,32 +61,28 @@ const ResponsiveHeader: FC<Props> = ({
 
         {isLogin && (
           <div className={styles.item}>
-            <BaseButton
-              onClick={logOut}
-              value={`${userData.name}: ${t<string>("header.logout")}`}
-            />
+            <BaseButton onClick={logOut}>
+              {`${userData.name}: ${t<string>("header.logout")}`}
+            </BaseButton>
           </div>
         )}
 
         {!isLogin && (
           <div className={styles.item}>
-            <BaseButton
-              onClick={openRegistrationModal}
-              value={t<string>("header.registration")}
-            />
+            <BaseButton onClick={openRegistrationModal}>
+              {t<string>("header.registration")}
+            </BaseButton>
             <div className={styles.item}>
-              <BaseButton
-                onClick={openLoginModal}
-                value={t<string>("header.login")}
-              />
+              <BaseButton onClick={openLoginModal}>
+                {t<string>("header.login")}
+              </BaseButton>
             </div>
           </div>
         )}
         <div className={styles.cart}>
-          <BaseButton
-            onClick={openCartModal}
-            value={`${t<string>("cart.cart")}  (${cartItemsQuantity})`}
-          />
+          <BaseButton onClick={openCartModal}>
+            {`${t<string>("cart.cart")}  (${cartItemsQuantity})`}
+          </BaseButton>
         </div>
         <div className={styles.item}>
           <BaseSwitch

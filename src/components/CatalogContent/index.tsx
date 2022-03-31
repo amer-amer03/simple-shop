@@ -19,7 +19,7 @@ const CatalogContent: FC<Props> = ({ item, checkedSwitch }): JSX.Element => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
-  const handleAddCartItem = (i: ICatalogDataResults) => {
+  const handleAddCartItem = (i: ICatalogDataResults): void => {
     dispatch(increaseCartItem(i));
     dispatch(addNotification(`${i.title} - ${t<string>("catalog.addToCart")}`));
   };
@@ -73,9 +73,9 @@ const CatalogContent: FC<Props> = ({ item, checkedSwitch }): JSX.Element => {
       <BaseButton
         className={styles.button}
         onClick={() => handleAddCartItem(item)}
-        type="button"
-        value={t<string>("catalog.addToCart")}
-      />
+      >
+        {t<string>("catalog.addToCart")}
+      </BaseButton>
     </div>
   );
 };

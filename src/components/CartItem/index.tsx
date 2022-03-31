@@ -1,7 +1,7 @@
 import { Action } from "@reduxjs/toolkit";
 import { FC, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { ICatalogDataResults } from "../../interfaces/catalog";
+import { ICatalogDataResults, ISpecs } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
 import {
   decreaseCartItem,
@@ -42,13 +42,13 @@ const CartItem: FC<Props> = ({ item }): JSX.Element => {
     let totalSpecsPrice = item.quantity
       ? item.priceSale * item.quantity
       : item.priceSale;
-    item.specs.forEach((spec) => {
+    item.specs.forEach((spec: ISpecs) => {
       if (spec.checked) totalSpecsPrice += spec.price;
     });
     dispatch(setTotalItemPrice(item.id, totalSpecsPrice));
   }, [item.specs, item.priceSale, item.id, item.quantity, dispatch]);
 
-  const handleRemoveItem = () => {
+  const handleRemoveItem = (): Action => {
     return dispatch(removeCartItem(item));
   };
 
@@ -66,7 +66,7 @@ const CartItem: FC<Props> = ({ item }): JSX.Element => {
             <BaseTypography value={item.title} />
           </div>
           <div>
-            {item.specs.map((spec) => {
+            {item.specs.map((spec: ISpecs) => {
               return (
                 <BaseCheckbox
                   key={spec.title}
@@ -83,18 +83,16 @@ const CartItem: FC<Props> = ({ item }): JSX.Element => {
       </div>
       <div className={styles.bottom}>
         <div className={styles.quantityButtons}>
-          <BaseButton
-            onClick={() => handleDecreaseCartItem(item)}
-            value={"-"}
-          />
+          <BaseButton onClick={() => handleDecreaseCartItem(item)}>
+            -
+          </BaseButton>
           <BaseTypography
             className={styles.quantity}
             value={`${item.quantity}`}
           />
-          <BaseButton
-            onClick={() => handleIncreaseCartItem(item)}
-            value={"+"}
-          />
+          <BaseButton onClick={() => handleIncreaseCartItem(item)}>
+            +
+          </BaseButton>
         </div>
         <div className={styles.price}>
           <BaseTypography value={`${item.totalPrice} ₴`} />

@@ -1,3 +1,4 @@
+import { Action } from "@reduxjs/toolkit";
 import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeNotification } from "../../store/actions/notification";
@@ -20,7 +21,7 @@ const Notification: FC = (): JSX.Element | null => {
 
   if (!notificationType) return null;
 
-  const handleHideModal = () => {
+  const handleHideModal = (): Action => {
     return dispatch(removeNotification());
   };
 

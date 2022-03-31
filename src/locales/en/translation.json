@@ -20,7 +20,8 @@
     "secondPassword": "Re-enter password",
     "enterSecondPassword": "Please re-enter your password",
     "privacyPolicy": "Privacy policy",
-    "privacyPolicyText": "By clicking submit you agree to our privacy policy and terms and conditions"
+    "privacyPolicyText": "By clicking submit you agree to our privacy policy and terms and conditions",
+    "submit": "Submit"
   },
   "catalog": {
     "sortBy": {

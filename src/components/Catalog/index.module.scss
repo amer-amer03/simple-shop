@@ -31,11 +31,9 @@
             padding: 0px 5px;
             flex-direction: column;
             justify-content: flex-start;
-            .toggle {
-                margin-left: 15px;
-            }
             .switch {
                 margin-top: 10px;
+                display: none;
             }
         }
     }
@@ -48,9 +46,6 @@
     .root {
         .switches {
             padding: 0px 5px;
-            .toggle {
-                margin-left: 15px;
-            }
         }
     }
 }

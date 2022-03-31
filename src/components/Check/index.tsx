@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { ICatalogDataResults, ISpecs } from "../../interfaces/catalog";
 import { IProps } from "../../interfaces/props";
 import { clearCart } from "../../store/actions/cart";
 import { hideModal } from "../../store/actions/modal";
@@ -34,7 +35,7 @@ const Check: FC<IProps> = (): JSX.Element => {
 
   const checkSmallBody = (
     <>
-      {cartData.map((item) => {
+      {cartData.map((item: ICatalogDataResults) => {
         return (
           <div key={item.id} className={styles.checkSmallItem}>
             <div>
@@ -44,7 +45,7 @@ const Check: FC<IProps> = (): JSX.Element => {
               />
             </div>
             <ul>
-              {item.specs.map((spec) => {
+              {item.specs.map((spec: ISpecs) => {
                 return (
                   spec.checked && <li key={spec.title}>{spec.description}</li>
                 );
@@ -62,7 +63,7 @@ const Check: FC<IProps> = (): JSX.Element => {
     </>
   );
 
-  const handleCloseModal = () => {
+  const handleCloseModal = (): void => {
     dispatch(addNotification(t<string>("check.thanks")));
     dispatch(hideModal());
     dispatch(clearCart());

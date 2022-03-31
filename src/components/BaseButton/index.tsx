@@ -9,7 +9,7 @@ interface Props extends IProps {
 }
 
 const BaseButton: FC<Props> = ({
-  value,
+  children,
   className,
   type = "button",
   onClick = () => null,
@@ -20,7 +20,7 @@ const BaseButton: FC<Props> = ({
       className={classNames(styles.button, className)}
       onClick={onClick}
     >
-      {value}
+      {children}
     </button>
   );
 };
