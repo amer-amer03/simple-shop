@@ -4,7 +4,6 @@ import { AuthTypes, IAuthAction } from "../actions/auth";
 export interface IAuthState {
     userData: IUserData
     isLogin: boolean
-    isLoading: boolean
 }
 
 export const initState: IAuthState = {
@@ -15,7 +14,6 @@ export const initState: IAuthState = {
         password: '',
     },
     isLogin: false,
-    isLoading: false
 };
 
 function authReducer(state = initState, action: IAuthAction): IAuthState {
@@ -23,7 +21,6 @@ function authReducer(state = initState, action: IAuthAction): IAuthState {
         case AuthTypes.REGISTRATION:
             return {
                 ...state,
-                isLoading: false,
                 isLogin: true,
                 userData: {
                     ...state.userData,
